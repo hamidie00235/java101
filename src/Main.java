@@ -20,20 +20,29 @@ public class Main {
 
        // Char ve Boolean Veri Tipleri
 
-      // char
-        char c1='j';
-        char c2='a';
-        char c3='v';
-        char c4='a';
-        System.out.println(""+c1+c2+c3+c4);
+//      // char
+//        char c1='j';
+//        char c2='a';
+//        char c3='v';
+//        char c4='a';
+//        System.out.println(""+c1+c2+c3+c4);
+//
+//        // boolean
+//        boolean vrai=true;
+//        boolean  faux=false;
+//        System.out.println(vrai);
+///// string veri tipi
+//        String vStr="java 101 patikasi";
+//        System.out.println(vStr);
 
-        // boolean
-        boolean vrai=true;
-        boolean  faux=false;
-        System.out.println(vrai);
-/// string veri tipi
-        String vStr="java 101 patikasi";
-        System.out.println(vStr);
+        // temel operator
+       // mantiksal operator
+        int x=2,y=4,z=3;
+        boolean result= x<y && z<x;
+        boolean result1=z<y || z<x;
+        String str = result?"that's correct!":"wrong!";
+        System.out.println(str);
+
     }
 
 
