@@ -31,7 +31,9 @@ public class Main {
         boolean vrai=true;
         boolean  faux=false;
         System.out.println(vrai);
-
+/// string veri tipi
+        String vStr="java 101 patikasi";
+        System.out.println(vStr);
     }
 
 
