@@ -43,19 +43,56 @@ public class Main {
 //        boolean result1=z<y || z<x;
 //        String str = result?"that's correct!":"wrong!";
 //        System.out.println(str);
-        int x = 1, y = 2, r=3;
-        r *= x + y;
-        System.out.print(r);
-        // Kullanicidan veri alma
+//        int x = 1, y = 2, r=3;
+//        r *= x + y;
+//        System.out.print(r);
+//        // Kullanicidan veri alma
+//
+//        Scanner enter =new Scanner(System.in);
+//        System.out.println("please enter the number :");
+//        int in =enter.nextInt();
+//        double doub= enter.nextDouble();
+//        String str=enter.nextLine();
+//        System.out.println(in);
+//        System.out.println(doub);
+//        System.out.println(str);
 
-        Scanner enter =new Scanner(System.in);
-        System.out.println("please enter the number :");
-        int in =enter.nextInt();
-        double doub= enter.nextDouble();
-        String str=enter.nextLine();
-        System.out.println(in);
-        System.out.println(doub);
-        System.out.println(str);
+
+
+        /// pratik not ortlamasina hesaplayan program
+
+        Scanner not = new Scanner(System.in);
+
+        System.out.println("maths notunuzu Giriniz:");
+        double maths = not.nextDouble();
+
+        System.out.println("fizik notunuzu Giriniz:");
+        double fizik = not.nextDouble();
+
+        System.out.println("turkce notunuzu Giriniz:");
+        double turkce = not.nextDouble();
+
+        System.out.println("tarih notunuzu Giriniz:");
+        double tarih = not.nextDouble();
+
+        System.out.println("muzik notunuzu Giriniz:");
+        double muzik = not.nextDouble();
+
+        System.out.println("kimya notunuzu Giriniz:");
+        double kimya = not.nextDouble();
+
+        // Calculate the average of the grades
+        double ortalama = (maths + fizik + turkce + tarih + kimya + muzik) / 6;
+
+        System.out.println("Ortalama: " + ortalama);
+
+        // Use ternary operator to determine pass or fail
+        String result = (ortalama >= 60) ? "Sınıfı Geçti" : "Sınıfı kaldı";
+
+        // Print the result
+        System.out.println(result);
+
+
 
     }
 
