@@ -96,15 +96,46 @@ public class Main {
 
 
         /*  pratik 2
-        * kdv tutari hesaplayan program */
-        Scanner fiyat  = new Scanner(System.in);
-        System.out.println("fiyatinzi Giriniz:");
-        double para= fiyat.nextInt();
-        double kdvOrani=(para>0 && para<1000)? (para*18)/100 : (para*8)/100;
-        double kdvliToplamFiyat =para+kdvOrani;
-        System.out.println("girdiniz  fiyat :"+para);
-        System.out.println("kdv orani:"+kdvOrani);
-        System.out.println("kdv'li toplam fiyat:"+kdvliToplamFiyat);
+        * kdv tutari hesaplayan program  odevi */
+//        Scanner fiyat  = new Scanner(System.in);
+//
+//        System.out.println("fiyatinzi Giriniz:");
+//
+//        double para= fiyat.nextInt();
+//
+//        double kdvOrani=(para>0 && para<1000)? (para*18)/100 : (para*8)/100;
+//
+//        double kdvliToplamFiyat =para+kdvOrani;
+//
+//        System.out.println("girdiniz  fiyat :"+para);
+//
+//        System.out.println("kdv orani:"+kdvOrani);
+//
+//        System.out.println("kdv'li toplam fiyat:"+kdvliToplamFiyat);
+
+
+
+
+        /* pratik 3
+        *  Dik Üçgende Hipotenüs Bulan Program
+        * */
+
+        // değişkenler
+        int a ,b;
+        double c ;
+        // kullanicidan veri alma
+
+        Scanner input  = new Scanner(System.in);
+
+        System.out.println("1. kenar girin:");
+        a= input.nextInt();
+        System.out.println("2. kenar girin:");
+        b= input.nextInt();
+        c=Math.sqrt(a*a) + (b*b);
+        System.out.println("hyppotenus:"+c);
+
+
+
 
 
     }
