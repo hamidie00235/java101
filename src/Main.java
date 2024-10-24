@@ -59,39 +59,52 @@ public class Main {
 
 
 
-        /// pratik not ortlamasina hesaplayan program
+//        /// pratik 1
+//        not ortlamasina hesaplayan program
+//
+//        Scanner not = new Scanner(System.in);
+//
+//        System.out.println("maths notunuzu Giriniz:");
+//        double maths = not.nextDouble();
+//
+//        System.out.println("fizik notunuzu Giriniz:");
+//        double fizik = not.nextDouble();
+//
+//        System.out.println("turkce notunuzu Giriniz:");
+//        double turkce = not.nextDouble();
+//
+//        System.out.println("tarih notunuzu Giriniz:");
+//        double tarih = not.nextDouble();
+//
+//        System.out.println("muzik notunuzu Giriniz:");
+//        double muzik = not.nextDouble();
+//
+//        System.out.println("kimya notunuzu Giriniz:");
+//        double kimya = not.nextDouble();
+//
+//        // Calculate the average of the grades
+//        double ortalama = (maths + fizik + turkce + tarih + kimya + muzik) / 6;
+//
+//        System.out.println("Ortalama: " + ortalama);
+//
+//        // Use ternary operator to determine pass or fail
+//        String result = (ortalama >= 60) ? "Sınıfı Geçti" : "Sınıfı kaldı";
+//
+//        // Print the result
+//        System.out.println(result);
 
-        Scanner not = new Scanner(System.in);
 
-        System.out.println("maths notunuzu Giriniz:");
-        double maths = not.nextDouble();
 
-        System.out.println("fizik notunuzu Giriniz:");
-        double fizik = not.nextDouble();
-
-        System.out.println("turkce notunuzu Giriniz:");
-        double turkce = not.nextDouble();
-
-        System.out.println("tarih notunuzu Giriniz:");
-        double tarih = not.nextDouble();
-
-        System.out.println("muzik notunuzu Giriniz:");
-        double muzik = not.nextDouble();
-
-        System.out.println("kimya notunuzu Giriniz:");
-        double kimya = not.nextDouble();
-
-        // Calculate the average of the grades
-        double ortalama = (maths + fizik + turkce + tarih + kimya + muzik) / 6;
-
-        System.out.println("Ortalama: " + ortalama);
-
-        // Use ternary operator to determine pass or fail
-        String result = (ortalama >= 60) ? "Sınıfı Geçti" : "Sınıfı kaldı";
-
-        // Print the result
-        System.out.println(result);
-
+        /*  pratik 2
+        * kdv tutari hesaplayan program */
+        Scanner fiyat  = new Scanner(System.in);
+        System.out.println("fiyatinzi Giriniz:");
+        double para= fiyat.nextInt();
+        double kdvOrani =(para*18)/100;
+        double kdvliToplamFiyat =para+kdvOrani;
+        System.out.println("girdiniz  fiyat :"+para);
+        System.out.println("kdv orani:"+kdvOrani);
+        System.out.println("kdv'li toplam fiyat:"+kdvliToplamFiyat);
 
 
     }
