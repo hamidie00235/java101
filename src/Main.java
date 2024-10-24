@@ -100,7 +100,7 @@ public class Main {
         Scanner fiyat  = new Scanner(System.in);
         System.out.println("fiyatinzi Giriniz:");
         double para= fiyat.nextInt();
-        double kdvOrani =(para*18)/100;
+        double kdvOrani=(para>0 && para<1000)? (para*18)/100 : (para*8)/100;
         double kdvliToplamFiyat =para+kdvOrani;
         System.out.println("girdiniz  fiyat :"+para);
         System.out.println("kdv orani:"+kdvOrani);
