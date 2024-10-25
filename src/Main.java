@@ -116,34 +116,56 @@ public class Main {
 
 
 
-        /* pratik 3
-        *  Dik Üçgende Hipotenüs Bulan Program
-        * */
+//        /* pratik 3
+//        *  Dik Üçgende Hipotenüs Bulan Program
+//        * */
+//
+//        // değişkenler
+//        int a ,b,c;
+//
+//        // kullanicidan veri alma
+//
+//        Scanner input  = new Scanner(System.in);
+//
+//        System.out.println("1. kenar girin:");
+//        a= input.nextInt();
+//        System.out.println("2. kenar girin:");
+//        b= input.nextInt();
+//        System.out.println("3.kenar:");
+//        c= input.nextInt();
+//        // Yarı çevre hesaplama
+//        double u =(a+b+c)/2;
+//        System.out.println("Yarı çevresi :"+u);
+//
+//        double alan = Math.sqrt(u * (u - a) * (u - b) * (u - c));
+//        System.out.println("Üçgenin alanı:" + alan);
 
-        // değişkenler
-        int a ,b,c;
 
-        // kullanicidan veri alma
 
+        /// pratik 4
+        /*
+        *
+        * Taksimetre Programı
+Java ile gidilen mesafeye (KM) göre taksimetre tutarını ekrana yazdıran programı yazın.
+
+Taksimetre KM başına 2.20 TL tutmaktadır.
+Minimum ödenecek tutar 20 TL'dir. 20 TL altında ki ücretlerde yine 20 TL alınacaktır.
+Taksimetre açılış ücreti 10 TL'dir.*/
+
+
+  int km;
+  double total,perKm=2.20 ,startPrice=10;
+
+// enter values from keyboard
         Scanner input  = new Scanner(System.in);
+        //logical service
+        System.out.print("enter the km:");
 
-        System.out.println("1. kenar girin:");
-        a= input.nextInt();
-        System.out.println("2. kenar girin:");
-        b= input.nextInt();
-        System.out.println("3.kenar:");
-        c= input.nextInt();
-        // Yarı çevre hesaplama
-        double u =(a+b+c)/2;
-        System.out.println("Yarı çevresi :"+u);
+        km= input.nextInt();
 
-        double alan = Math.sqrt(u * (u - a) * (u - b) * (u - c));
-        System.out.println("Üçgenin alanı:" + alan);
-
-
-
-
-
+        total=(km*perKm)+startPrice;
+        total=(total<20)?20 :total;
+        System.out.println("the total price is :" +total);
     }
 
 
