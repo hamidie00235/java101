@@ -179,17 +179,17 @@ Taksimetre açılış ücreti 10 TL'dir.*/
 
 
 
-        double radius,alan,cevre ,pi=3.14;
-
+        double r,alan ,pi=3.14,alpha;
         Scanner in =new Scanner(System.in);
 
         System.out.println("Please enter the radius of your areas:");
-        radius=in.nextDouble();
-
-        alan= pi*(radius*radius);
+        r=in.nextDouble();
+        System.out.println("please enter the value of alpha:");
+         alpha=in.nextDouble();
+        alan = Math.PI * r * r * (alpha/ 360);
         System.out.println("your area is :" +alan);
-        cevre=2*pi*radius;
-        System.out.println("your perimeter is:" +cevre);
+
+
     }
 
 
