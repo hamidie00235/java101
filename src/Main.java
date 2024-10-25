@@ -121,8 +121,8 @@ public class Main {
         * */
 
         // değişkenler
-        int a ,b;
-        double c ;
+        int a ,b,c;
+
         // kullanicidan veri alma
 
         Scanner input  = new Scanner(System.in);
@@ -131,8 +131,14 @@ public class Main {
         a= input.nextInt();
         System.out.println("2. kenar girin:");
         b= input.nextInt();
-        c=Math.sqrt(a*a) + (b*b);
-        System.out.println("hyppotenus:"+c);
+        System.out.println("3.kenar:");
+        c= input.nextInt();
+        // Yarı çevre hesaplama
+        double u =(a+b+c)/2;
+        System.out.println("Yarı çevresi :"+u);
+
+        double alan = Math.sqrt(u * (u - a) * (u - b) * (u - c));
+        System.out.println("Üçgenin alanı:" + alan);
 
 
 
