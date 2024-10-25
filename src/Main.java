@@ -153,19 +153,43 @@ Minimum ödenecek tutar 20 TL'dir. 20 TL altında ki ücretlerde yine 20 TL alı
 Taksimetre açılış ücreti 10 TL'dir.*/
 
 
-  int km;
-  double total,perKm=2.20 ,startPrice=10;
+//  int km;
+//  double total,perKm=2.20 ,startPrice=10;
+//
+//// enter values from keyboard
+//        Scanner input  = new Scanner(System.in);
+//        //logical service
+//        System.out.print("enter the km:");
+//
+//        km= input.nextInt();
+//
+//        total=(km*perKm)+startPrice;
+//        total=(total<20)?20 :total;
+//        System.out.println("the total price is :" +total);
 
-// enter values from keyboard
-        Scanner input  = new Scanner(System.in);
-        //logical service
-        System.out.print("enter the km:");
 
-        km= input.nextInt();
 
-        total=(km*perKm)+startPrice;
-        total=(total<20)?20 :total;
-        System.out.println("the total price is :" +total);
+
+
+        /*pratik 5
+        *
+        *
+        * Dairenin Alanını ve Çevresini Hesaplayan Program
+         */
+
+
+
+        double radius,alan,cevre ,pi=3.14;
+
+        Scanner in =new Scanner(System.in);
+
+        System.out.println("Please enter the radius of your areas:");
+        radius=in.nextDouble();
+
+        alan= pi*(radius*radius);
+        System.out.println("your area is :" +alan);
+        cevre=2*pi*radius;
+        System.out.println("your perimeter is:" +cevre);
     }
 
 
