@@ -179,16 +179,33 @@ Taksimetre açılış ücreti 10 TL'dir.*/
 
 
 
-        double r,alan ,pi=3.14,alpha;
-        Scanner in =new Scanner(System.in);
+//        double r,alan ,pi=3.14,alpha;
+//        Scanner in =new Scanner(System.in);
+//
+//        System.out.println("Please enter the radius of your areas:");
+//        r=in.nextDouble();
+//        System.out.println("please enter the value of alpha:");
+//         alpha=in.nextDouble();
+//        alan = Math.PI * r * r * (alpha/ 360);
+//        System.out.println("your area is :" +alan);
 
-        System.out.println("Please enter the radius of your areas:");
-        r=in.nextDouble();
-        System.out.println("please enter the value of alpha:");
-         alpha=in.nextDouble();
-        alan = Math.PI * r * r * (alpha/ 360);
-        System.out.println("your area is :" +alan);
 
+
+
+
+        /* pratik 6
+        *
+        * Vücut Kitle İndeksi Hesaplama*/
+
+        double kilo,boy;
+        Scanner giris=new Scanner(System.in);
+        System.out.println(" Please !enter your weight:");
+        kilo=giris.nextDouble();
+        System.out.println("Please! enter your size:");
+        boy= giris.nextDouble();
+
+        double KTI=kilo/(boy*boy);
+        System.out.println("Vücut Kitle İndeksiniz:" +KTI);
 
     }
 
