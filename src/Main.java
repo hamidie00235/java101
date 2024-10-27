@@ -195,17 +195,44 @@ Taksimetre açılış ücreti 10 TL'dir.*/
 
         /* pratik 6
         *
-        * Vücut Kitle İndeksi Hesaplama*/
+//        * Vücut Kitle İndeksi Hesaplama*/
+//
+//        double kilo,boy;
+//        Scanner giris=new Scanner(System.in);
+//        System.out.println(" Please !enter your weight:");
+//        kilo=giris.nextDouble();
+//        System.out.println("Please! enter your size:");
+//        boy= giris.nextDouble();
+//
+//        double KTI=kilo/(boy*boy);
+//        System.out.println("Vücut Kitle İndeksiniz:" +KTI);
 
-        double kilo,boy;
-        Scanner giris=new Scanner(System.in);
-        System.out.println(" Please !enter your weight:");
-        kilo=giris.nextDouble();
-        System.out.println("Please! enter your size:");
-        boy= giris.nextDouble();
 
-        double KTI=kilo/(boy*boy);
-        System.out.println("Vücut Kitle İndeksiniz:" +KTI);
+
+
+        //pratik 7
+        double armutFiyati = 2.14;
+        double elmaFiyati = 3.67;
+        double domatesFiyati = 1.11;
+        double muzFiyati = 0.95;
+        double patlicanFiyati = 5.00;
+
+        Scanner input =new Scanner(System.in);
+        System.out.println("enter armut kilogram ");
+        double armutKilo=input.nextDouble();
+        System.out.println("enter elma kilogram ");
+        double elmaKilo=input.nextDouble();
+        System.out.println("enter armut kilogram ");
+        double tomatesKilo=input.nextDouble();
+        System.out.println("enter muz kilogram ");
+        double muzKilo=input.nextDouble();
+        System.out.println("enter patlican Kilo");
+         double patlicanKilo= input.nextDouble();
+       double totalTutar=(armutFiyati * armutKilo) + (elmaFiyati * elmaKilo)
+               + (domatesFiyati * tomatesKilo) + (muzFiyati * muzKilo)
+               + (patlicanFiyati * patlicanKilo);
+        System.out.println("your total cost is:"+totalTutar+"TL");
+
 
     }
 
