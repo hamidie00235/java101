@@ -242,7 +242,8 @@ Taksimetre açılış ücreti 10 TL'dir.*/
 
         / If ve Else Blokları
          */
-     int a=3,b=29,c=3;
+     int a=3,b=29,c=8;
+
      if((a<b) && (a<c))
      {
          System.out.println("a is the smallest one");
