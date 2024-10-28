@@ -210,28 +210,59 @@ Taksimetre açılış ücreti 10 TL'dir.*/
 
 
 
-        //pratik 7
-        double armutFiyati = 2.14;
-        double elmaFiyati = 3.67;
-        double domatesFiyati = 1.11;
-        double muzFiyati = 0.95;
-        double patlicanFiyati = 5.00;
+//        //pratik 7
+//        double armutFiyati = 2.14;
+//        double elmaFiyati = 3.67;
+//        double domatesFiyati = 1.11;
+//        double muzFiyati = 0.95;
+//        double patlicanFiyati = 5.00;
+//
+//        Scanner input =new Scanner(System.in);
+//        System.out.println("enter armut kilogram ");
+//        double armutKilo=input.nextDouble();
+//        System.out.println("enter elma kilogram ");
+//        double elmaKilo=input.nextDouble();
+//        System.out.println("enter armut kilogram ");
+//        double tomatesKilo=input.nextDouble();
+//        System.out.println("enter muz kilogram ");
+//        double muzKilo=input.nextDouble();
+//        System.out.println("enter patlican Kilo");
+//         double patlicanKilo= input.nextDouble();
+//       double totalTutar=(armutFiyati * armutKilo) + (elmaFiyati * elmaKilo)
+//               + (domatesFiyati * tomatesKilo) + (muzFiyati * muzKilo)
+//               + (patlicanFiyati * patlicanKilo);
+//        System.out.println("your total cost is:"+totalTutar+"TL");
 
-        Scanner input =new Scanner(System.in);
-        System.out.println("enter armut kilogram ");
-        double armutKilo=input.nextDouble();
-        System.out.println("enter elma kilogram ");
-        double elmaKilo=input.nextDouble();
-        System.out.println("enter armut kilogram ");
-        double tomatesKilo=input.nextDouble();
-        System.out.println("enter muz kilogram ");
-        double muzKilo=input.nextDouble();
-        System.out.println("enter patlican Kilo");
-         double patlicanKilo= input.nextDouble();
-       double totalTutar=(armutFiyati * armutKilo) + (elmaFiyati * elmaKilo)
-               + (domatesFiyati * tomatesKilo) + (muzFiyati * muzKilo)
-               + (patlicanFiyati * patlicanKilo);
-        System.out.println("your total cost is:"+totalTutar+"TL");
+
+
+
+
+
+        /* pratik8
+
+        / If ve Else Blokları
+         */
+     int a=3,b=29,c=3;
+     if((a<b) && (a<c))
+     {
+         System.out.println("a is the smallest one");
+
+
+     }
+     else if((a>b) && (a>c))
+     {
+         System.out.println("a is the greatest one");
+     }
+else if((a<b)||(a>c) )
+     {
+         if(a<c){
+             System.out.println("a is bigger than them");
+         }
+         System.out.println("b is the biggest one ");
+     }
+    else{
+         System.out.println("c is the smallest number");
+     }
 
 
     }
