@@ -238,34 +238,61 @@ Taksimetre açılış ücreti 10 TL'dir.*/
 
 
 
-        /* pratik8
+//        /* pratik8
+//
+//        / If ve Else Blokları
+//         */
+//     int a=3,b=29,c=8;
+//
+//     if((a<b) && (a<c))
+//     {
+//         System.out.println("a is the smallest one");
+//
+//
+//     }
+//     else if((a>b) && (a>c))
+//     {
+//         System.out.println("a is the greatest one");
+//     }
+//else if((a<b)||(a>c) )
+//     {
+//         if(a<c){
+//             System.out.println("a is bigger than them");
+//         }
+//         System.out.println("b is the biggest one ");
+//     }
+//    else{
+//         System.out.println("c is the smallest number");
+//     }
 
-        / If ve Else Blokları
+
+        /*pratik 9
+
+        Switch-Case Yapısı/
          */
-     int a=3,b=29,c=8;
-
-     if((a<b) && (a<c))
-     {
-         System.out.println("a is the smallest one");
 
 
-     }
-     else if((a>b) && (a>c))
-     {
-         System.out.println("a is the greatest one");
-     }
-else if((a<b)||(a>c) )
-     {
-         if(a<c){
-             System.out.println("a is bigger than them");
-         }
-         System.out.println("b is the biggest one ");
-     }
-    else{
-         System.out.println("c is the smallest number");
-     }
+        int day=9;
 
-
+        switch (day){
+            case 1:
+                System.out.println("monday");
+                break;
+            case 2:
+                System.out.println("tuesday");
+                break;
+            case 3:
+                System.out.println("wednesday");
+                break;
+            case 4:
+                System.out.println("thursday");
+                break;
+            case 5:
+                System.out.println("friday");
+                break;
+            default:
+                System.out.println("weekend");
+        }
     }
 
 
