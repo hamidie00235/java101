@@ -283,38 +283,73 @@ Taksimetre açılış ücreti 10 TL'dir.*/
         calculator with if-else conditions
         /
          */
+//        int n1,n2,select;
+//
+//        Scanner input =new Scanner(System.in);
+//
+//        System.out.print("Enter the first number:");
+//        n1= input.nextInt();
+//        System.out.print("Enter the second  number:");
+//        n2= input.nextInt();
+//        System.out.println("1-addition\n2-substraction\n3-multiplication\n4-division");
+//        System.out.println("Please enter your choix");
+//        select= input.nextInt();
+//        if(select==1){
+//            System.out.println(+(n1+n2));
+//        } else if (select==2) {
+//            System.out.println(+(n1-n2));
+//        }
+//        else if (select==3) {
+//            System.out.println(+(n1*n2));
+//        }
+//        else if (select==4) {
+//            if(n2!=0){
+//            System.out.println(+(n1/n2));}
+//            else{
+//                    System.out.println("You cannot divide by zero!");
+//                }
+//
+//            }
+//        else {
+//            System.out.println("you may choose an wrong choix,Please try again !");
+//
+//    }
+
         int n1,n2,select;
+        Scanner it =new Scanner(System.in);
 
-        Scanner input =new Scanner(System.in);
 
-        System.out.print("Enter the first number:");
-        n1= input.nextInt();
-        System.out.print("Enter the second  number:");
-        n2= input.nextInt();
+        System.out.println("Enter your first number:");
+        n1= it.nextInt();
+        System.out.println("Enter your second number:");
+        n2= it.nextInt();
         System.out.println("1-addition\n2-substraction\n3-multiplication\n4-division");
         System.out.println("Please enter your choix");
-        select= input.nextInt();
-        if(select==1){
-            System.out.println(+(n1+n2));
-        } else if (select==2) {
-            System.out.println(+(n1-n2));
-        }
-        else if (select==3) {
-            System.out.println(+(n1*n2));
-        }
-        else if (select==4) {
-            if(n2!=0){
-            System.out.println(+(n1/n2));}
-            else{
+        select= it.nextInt();
+
+
+        // Switch case for selected operation
+        switch (select) {
+            case 1:
+                System.out.println("Result: " + (n1 + n2));
+                break;
+            case 2:
+                System.out.println("Result: " + (n1 - n2));
+                break;
+            case 3:
+                System.out.println("Result: " + (n1 * n2));
+                break;
+            case 4:
+                if (n2 != 0) {
+                    System.out.println("Result: " + (n1 / n2));
+                } else {
                     System.out.println("You cannot divide by zero!");
                 }
+                break;
+            default:
+                System.out.println("You may have chosen a wrong option. Please try again!");
+        }
 
-            }
-        else {
-            System.out.println("you may choose an wrong choix,Please try again !");
 
     }
-    }
-
-
 }
