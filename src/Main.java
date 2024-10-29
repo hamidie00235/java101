@@ -272,27 +272,48 @@ Taksimetre açılış ücreti 10 TL'dir.*/
          */
 
 
-        int day=9;
+//
 
-        switch (day){
-            case 1:
-                System.out.println("monday");
-                break;
-            case 2:
-                System.out.println("tuesday");
-                break;
-            case 3:
-                System.out.println("wednesday");
-                break;
-            case 4:
-                System.out.println("thursday");
-                break;
-            case 5:
-                System.out.println("friday");
-                break;
-            default:
-                System.out.println("weekend");
+
+
+
+
+
+        /* pratik 10
+        calculator with if-else conditions
+        /
+         */
+        int n1,n2,select;
+
+        Scanner input =new Scanner(System.in);
+
+        System.out.print("Enter the first number:");
+        n1= input.nextInt();
+        System.out.print("Enter the second  number:");
+        n2= input.nextInt();
+        System.out.println("1-addition\n2-substraction\n3-multiplication\n4-division");
+        System.out.println("Please enter your choix");
+        select= input.nextInt();
+        if(select==1){
+            System.out.println(+(n1+n2));
+        } else if (select==2) {
+            System.out.println(+(n1-n2));
         }
+        else if (select==3) {
+            System.out.println(+(n1*n2));
+        }
+        else if (select==4) {
+            if(n2!=0){
+            System.out.println(+(n1/n2));}
+            else{
+                    System.out.println("You cannot divide by zero!");
+                }
+
+            }
+        else {
+            System.out.println("you may choose an wrong choix,Please try again !");
+
+    }
     }
 
 
