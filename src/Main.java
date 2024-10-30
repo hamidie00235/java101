@@ -510,13 +510,13 @@ Sıcaklık 25'ten büyük ise "Yüzme" etkinliğini öner.
         if(heat<=5){
             System.out.println("kayak yapabilirsiniz");
         }
-        if(heat>=5 && heat<=15){
+        else if(heat<=15){
             System.out.println("Sinemaya gidebilirsiniz");
         }
-        if(heat>=10 && heat<=25){
+      else if(heat<=25){
             System.out.println("piknik yapabilirsiniz");
         }
-        if(heat>=25){
+        else{
             System.out.println("yuzume gidebilirsiniz");
         }
 
