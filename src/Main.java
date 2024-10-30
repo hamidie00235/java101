@@ -359,20 +359,68 @@ Taksimetre açılış ücreti 10 TL'dir.*/
         Kullanıcı Girişi
         /
          */
+//
+//        String userName,password;
+//        Scanner inp=new Scanner(System.in);
+//        System.out.println("enter your userName:");
+//        userName=inp.nextLine();
+//        System.out.println("enter your password:");
+//        password=inp.nextLine();
+//
+//        if(userName.equals("Patika") && password.equals("java1234")){
+//
+//            System.out.println("you are successfully connected !");
+//
+//        }
+//        else{
+//            System.out.println("you entered the wrong informations !");
+//
+//    }
 
-        String userName,password;
-        Scanner inp=new Scanner(System.in);
-        System.out.println("enter your userName:");
-        userName=inp.nextLine();
-        System.out.println("enter your password:");
-        password=inp.nextLine();
 
-        if(userName.equals("Patika") && password.equals("java1234")){
-            System.out.println("you are successfully connected !");
 
+
+
+        /*pratik12
+        Ödev:
+        Eğer şifre yanlış ise kullanıcıya şifresini sıfırlayıp sıfırlamayacağını sorun,
+         eğer kullanıcı sıfırlamak isterse yeni girdiği şifrenin unuttuğu şifre ile aynı olmaması gerektiğini kontrol edip,
+          şifreler aynı ise ekrana "Şifre oluşturulamadı, lütfen başka şifre giriniz."
+           sorun yoksa "Şifre oluşturuldu" yazan programı yazınız.
+        /
+         */
+
+
+        Scanner input = new Scanner(System.in);
+
+        String correctPassword = "212879";
+
+        System.out.println("Enter your password:");
+        String password = input.nextLine();
+
+        if (!password.equals(correctPassword)) {
+            System.out.println("You may have entered a wrong password!");
+
+            System.out.println("Do you want to reinitialize? (yes/no):");
+            String resetPassword = input.nextLine();
+
+            if (resetPassword.equalsIgnoreCase("yes")) {
+                System.out.println("Enter your new password:");
+                String newPassword = input.nextLine();
+
+                if (newPassword.equals(correctPassword)) {
+                    System.out.println("The password is not created! Please choose a different password.");
+                } else {
+                    System.out.println("The password is created!");
+                }
+            } else {
+                System.out.println("Password reset is canceled!");
+            }
+
+        } else {
+            System.out.println("Successfully connected!");
         }
-        else{
-            System.out.println("you entered the wrong informations !");
 
+        input.close();
     }
-}}
+}
