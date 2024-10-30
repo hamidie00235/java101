@@ -390,37 +390,71 @@ Taksimetre açılış ücreti 10 TL'dir.*/
         /
          */
 
+//
+//        Scanner input = new Scanner(System.in);
+//
+//        String correctPassword = "212879";
+//
+//        System.out.println("Enter your password:");
+//        String password = input.nextLine();
+//
+//        if (!password.equals(correctPassword)) {
+//            System.out.println("You may have entered a wrong password!");
+//
+//            System.out.println("Do you want to reinitialize? (yes/no):");
+//            String resetPassword = input.nextLine();
+//
+//            if (resetPassword.equalsIgnoreCase("yes")) {
+//                System.out.println("Enter your new password:");
+//                String newPassword = input.nextLine();
+//
+//                if (newPassword.equals(correctPassword)) {
+//                    System.out.println("The password is not created! Please choose a different password.");
+//                } else {
+//                    System.out.println("The password is created!");
+//                }
+//            } else {
+//                System.out.println("Password reset is canceled!");
+//            }
+//
+//        } else {
+//            System.out.println("Successfully connected!");
+//        }
+//
+//        input.close();
 
-        Scanner input = new Scanner(System.in);
 
-        String correctPassword = "212879";
 
-        System.out.println("Enter your password:");
-        String password = input.nextLine();
+        /*pratik13/
 
-        if (!password.equals(correctPassword)) {
-            System.out.println("You may have entered a wrong password!");
+        Sınıfı Geçme Durumu
+         */
 
-            System.out.println("Do you want to reinitialize? (yes/no):");
-            String resetPassword = input.nextLine();
+        double maths,physics ,turkish,chemistry,music,passMark=55;
 
-            if (resetPassword.equalsIgnoreCase("yes")) {
-                System.out.println("Enter your new password:");
-                String newPassword = input.nextLine();
+        Scanner input =new Scanner(System.in);
 
-                if (newPassword.equals(correctPassword)) {
-                    System.out.println("The password is not created! Please choose a different password.");
-                } else {
-                    System.out.println("The password is created!");
-                }
-            } else {
-                System.out.println("Password reset is canceled!");
-            }
+        System.out.println("Enter your maths mark:");
+        maths=input.nextDouble();
+        System.out.println("Enter your Physics mark:");
+        physics=input.nextDouble();
+        System.out.println("Enter your Turkish mark:");
+        turkish=input.nextDouble();
+        System.out.println("Enter your Chemistry mark:");
+        chemistry=input.nextDouble();
+        System.out.println("Enter your Music mark:");
+        music=input.nextDouble();
 
-        } else {
-            System.out.println("Successfully connected!");
+
+        double average =(maths+physics+turkish+chemistry+music)/5;
+
+        if(average>=passMark){
+            System.out.println("Congratulations ! you are an honore student");
+        }
+        else {
+            System.out.println("sorry you failed ,we hope to see you next year with more determination  ");
+        }
+        System.out.println("your Average is :"+average);
         }
 
-        input.close();
-    }
-}
+    };
