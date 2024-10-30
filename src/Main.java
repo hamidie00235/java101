@@ -430,65 +430,97 @@ Taksimetre açılış ücreti 10 TL'dir.*/
         Sınıfı Geçme Durumu
          */
 
-        double maths, physics, turkish, chemistry, music;
-        double passMark = 55;
-        double total = 0;
-        int coursNumber = 0;
+//        double maths, physics, turkish, chemistry, music;
+//        double passMark = 55;
+//        double total = 0;
+//        int coursNumber = 0;
+//
+//        Scanner input = new Scanner(System.in);
+//
+//        // Math score
+//        System.out.println("Enter your Maths mark:");
+//        maths = input.nextDouble();
+//        if (maths >= 0 && maths <= 100) {
+//            total += maths;
+//            coursNumber++;
+//        }
+//
+//        // Physics score
+//        System.out.println("Enter your Physics mark:");
+//        physics = input.nextDouble();
+//        if (physics >= 0 && physics <= 100) {
+//            total += physics;
+//            coursNumber++;
+//        }
+//
+//        // Turkish score
+//        System.out.println("Enter your Turkish mark:");
+//        turkish = input.nextDouble();
+//        if (turkish >= 0 && turkish <= 100) {
+//            total += turkish;
+//            coursNumber++;
+//        }
+//
+//        // Chemistry score
+//        System.out.println("Enter your Chemistry mark:");
+//        chemistry = input.nextDouble();
+//        if (chemistry >= 0 && chemistry <= 100) {
+//            total += chemistry;
+//            coursNumber++;
+//        }
+//
+//        // Music score
+//        System.out.println("Enter your Music mark:");
+//        music = input.nextDouble();
+//        if (music >= 0 && music <= 100) {
+//            total += music;
+//            coursNumber++;
+//        }
+//
+//        // Calculate average only with valid scores
+//        double average = (coursNumber > 0) ? total / coursNumber : 0;
+//
+//        // Check if the student passes
+//        if (average >= passMark) {
+//            System.out.println("Congratulations! You are an honor student.");
+//        } else {
+//            System.out.println("Sorry, you failed. We hope to see you next year with more determination.");
+//        }
+//
+//        System.out.println("Your Average is: " + average);
+//
+//        input.close();
 
-        Scanner input = new Scanner(System.in);
 
-        // Math score
-        System.out.println("Enter your Maths mark:");
-        maths = input.nextDouble();
-        if (maths >= 0 && maths <= 100) {
-            total += maths;
-            coursNumber++;
+
+        /*pratik 14
+        Hava Sıcaklığına Göre Etkinlik Önerme/
+        Koşullar :
+
+Sıcaklık 5'dan küçük ise "Kayak" yapmayı öner.
+Sıcaklık 5 ve 15 arasında ise "Sinema" etkinliğini öner.
+Sıcaklık 15 ve 25 arasında ise "Piknik" etkinliğini öner.
+Sıcaklık 25'ten büyük ise "Yüzme" etkinliğini öner.
+         */
+
+        int heat;
+        Scanner input =new Scanner(System.in);
+        System.out.println("Enter the value of heat:");
+        heat= input.nextInt();
+        if(heat<=5){
+            System.out.println("kayak yapabilirsiniz");
+        }
+        if(heat>=5 && heat<=15){
+            System.out.println("Sinemaya gidebilirsiniz");
+        }
+        if(heat>=10 && heat<=25){
+            System.out.println("piknik yapabilirsiniz");
+        }
+        if(heat>=25){
+            System.out.println("yuzume gidebilirsiniz");
         }
 
-        // Physics score
-        System.out.println("Enter your Physics mark:");
-        physics = input.nextDouble();
-        if (physics >= 0 && physics <= 100) {
-            total += physics;
-            coursNumber++;
-        }
 
-        // Turkish score
-        System.out.println("Enter your Turkish mark:");
-        turkish = input.nextDouble();
-        if (turkish >= 0 && turkish <= 100) {
-            total += turkish;
-            coursNumber++;
-        }
 
-        // Chemistry score
-        System.out.println("Enter your Chemistry mark:");
-        chemistry = input.nextDouble();
-        if (chemistry >= 0 && chemistry <= 100) {
-            total += chemistry;
-            coursNumber++;
-        }
-
-        // Music score
-        System.out.println("Enter your Music mark:");
-        music = input.nextDouble();
-        if (music >= 0 && music <= 100) {
-            total += music;
-            coursNumber++;
-        }
-
-        // Calculate average only with valid scores
-        double average = (coursNumber > 0) ? total / coursNumber : 0;
-
-        // Check if the student passes
-        if (average >= passMark) {
-            System.out.println("Congratulations! You are an honor student.");
-        } else {
-            System.out.println("Sorry, you failed. We hope to see you next year with more determination.");
-        }
-
-        System.out.println("Your Average is: " + average);
-
-        input.close();
     }
 }
