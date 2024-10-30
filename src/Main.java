@@ -430,31 +430,65 @@ Taksimetre açılış ücreti 10 TL'dir.*/
         Sınıfı Geçme Durumu
          */
 
-        double maths,physics ,turkish,chemistry,music,passMark=55;
+        double maths, physics, turkish, chemistry, music;
+        double passMark = 55;
+        double total = 0;
+        int coursNumber = 0;
 
-        Scanner input =new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter your maths mark:");
-        maths=input.nextDouble();
+        // Math score
+        System.out.println("Enter your Maths mark:");
+        maths = input.nextDouble();
+        if (maths >= 0 && maths <= 100) {
+            total += maths;
+            coursNumber++;
+        }
+
+        // Physics score
         System.out.println("Enter your Physics mark:");
-        physics=input.nextDouble();
+        physics = input.nextDouble();
+        if (physics >= 0 && physics <= 100) {
+            total += physics;
+            coursNumber++;
+        }
+
+        // Turkish score
         System.out.println("Enter your Turkish mark:");
-        turkish=input.nextDouble();
+        turkish = input.nextDouble();
+        if (turkish >= 0 && turkish <= 100) {
+            total += turkish;
+            coursNumber++;
+        }
+
+        // Chemistry score
         System.out.println("Enter your Chemistry mark:");
-        chemistry=input.nextDouble();
+        chemistry = input.nextDouble();
+        if (chemistry >= 0 && chemistry <= 100) {
+            total += chemistry;
+            coursNumber++;
+        }
+
+        // Music score
         System.out.println("Enter your Music mark:");
-        music=input.nextDouble();
-
-
-        double average =(maths+physics+turkish+chemistry+music)/5;
-
-        if(average>=passMark){
-            System.out.println("Congratulations ! you are an honore student");
-        }
-        else {
-            System.out.println("sorry you failed ,we hope to see you next year with more determination  ");
-        }
-        System.out.println("your Average is :"+average);
+        music = input.nextDouble();
+        if (music >= 0 && music <= 100) {
+            total += music;
+            coursNumber++;
         }
 
-    };
+        // Calculate average only with valid scores
+        double average = (coursNumber > 0) ? total / coursNumber : 0;
+
+        // Check if the student passes
+        if (average >= passMark) {
+            System.out.println("Congratulations! You are an honor student.");
+        } else {
+            System.out.println("Sorry, you failed. We hope to see you next year with more determination.");
+        }
+
+        System.out.println("Your Average is: " + average);
+
+        input.close();
+    }
+}
