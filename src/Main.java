@@ -503,24 +503,65 @@ Sıcaklık 15 ve 25 arasında ise "Piknik" etkinliğini öner.
 Sıcaklık 25'ten büyük ise "Yüzme" etkinliğini öner.
          */
 
-        int heat;
+//        int heat;
+//        Scanner input =new Scanner(System.in);
+//        System.out.println("Enter the value of heat:");
+//        heat= input.nextInt();
+//        if(heat<=5){
+//            System.out.println("kayak yapabilirsiniz");
+//        }
+//        else if(heat<=15){
+//            System.out.println("Sinemaya gidebilirsiniz");
+//        }
+//      else if(heat<=25){
+//            System.out.println("piknik yapabilirsiniz");
+//        }
+//        else{
+//            System.out.println("yuzume gidebilirsiniz");
+//        }
+//
+
+
+
+
+
+
+        /*pratik15
+        / Sayıları Büyükten Küçüğe Sıralama
+         */
+        int a,b,c;
         Scanner input =new Scanner(System.in);
-        System.out.println("Enter the value of heat:");
-        heat= input.nextInt();
-        if(heat<=5){
-            System.out.println("kayak yapabilirsiniz");
-        }
-        else if(heat<=15){
-            System.out.println("Sinemaya gidebilirsiniz");
-        }
-      else if(heat<=25){
-            System.out.println("piknik yapabilirsiniz");
-        }
-        else{
-            System.out.println("yuzume gidebilirsiniz");
-        }
+        System.out.println("Enter the value of a:");
+        a= input.nextInt();
+        System.out.println("Enter the value of b:");
+        b= input.nextInt();
+        System.out.println("Enter the value of c:");
+        c= input.nextInt();
 
+        if(a>b && a>c){
+            if(b>c){
+                System.out.println("a>b>c");
+            }
+            else {
+                System.out.println("a>c>b");
+            }
+        } else if (b>a && b>c) {
+            if(a>c){
+                System.out.println("b>a>c");
+            }
+            else {
+                System.out.println("b>c>a");
+            }
 
+        } else if (c>b && c>a) {
+            if(a>b){
+                System.out.println("c>a>b");
+            }
+            else {
+                System.out.println("c>b>a");
+            }
+
+        }
 
     }
 }
