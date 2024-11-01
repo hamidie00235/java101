@@ -594,6 +594,9 @@ Pisces Horoscope : February 20 - March 20
 
 
         * */
+
+
+
         int month, day;
         Scanner input = new Scanner(System.in);
 
