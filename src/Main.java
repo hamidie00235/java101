@@ -594,173 +594,144 @@ Pisces Horoscope : February 20 - March 20
 
 
         * */
+        int month, day;
+        Scanner input = new Scanner(System.in);
 
-        int month,day;
-        Scanner input =new Scanner(System.in);
-        System.out.print("Enter the month :");
-        month= input.nextInt();
-        System.out.print("Enter the day :");
+        System.out.print("Enter the month: ");
+        month = input.nextInt();
+
+        System.out.print("Enter the day: ");
         day = input.nextInt();
 
-        String horoscope="" ;
-        boolean isError =false;
+        String horoscope = "";
+        boolean isError = false;
 
-        switch (month) {
-            case 1:
-                if (day >= 1 && day <= 31) {
-                    if (day >= 22) {
-                        horoscope = "Aquarius";
-                    } else {
-                        horoscope = "Capricorn";
-                    }
+        if (month == 1) {
+            if (day >= 1 && day <= 31) {
+                if (day >= 20) {
+                    horoscope = "Aquarius";
                 } else {
-                    isError = true;
+                    horoscope = "Capricorn";
                 }
-                break;
-
-            case 2:
-                if (day >= 1 && day <= 28) {
-                    if (day >= 20) {
-                        horoscope = "Spices";
-                    } else {
-                        horoscope = "Aquarius";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-
-
-            case 3:
-                if (day >= 1 && day <= 30) {
-                    if (day >= 21) {
-                        horoscope = "Aries";
-                    } else {
-                        horoscope = "Spices";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-            case 4:
-                if (day >= 1 && day <= 30) {
-                    if (day >= 21) {
-                        horoscope = "Taurus ";
-                    } else {
-                        horoscope = "Aries";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-            case 5:
-                if (day >= 1 && day <= 31) {
-                    if (day >= 22) {
-                        horoscope = "Gemini ";
-                    } else {
-                        horoscope = "Taurus";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-            case 6:
-                if (day >= 1 && day <= 30) {
-                    if (day >= 23) {
-                        horoscope = "Cancer ";
-                    } else {
-                        horoscope = "Gemini";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-            case 7:
-                if (day >= 1 && day <= 31) {
-                    if (day >= 23) {
-                        horoscope = "leo";
-                    } else {
-                        horoscope = "Aries";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-            case 8:
-                if (day >= 1 && day <= 30) {
-                    if (day >= 23) {
-                        horoscope = "Virgo ";
-                    } else {
-                        horoscope = "Leo";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-            case 9:
-                if (day >= 1 && day <= 31) {
-                    if (day >= 23) {
-                        horoscope = "Libra ";
-                    } else {
-                        horoscope = "Virgo";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-            case 10:
-                if (day >= 1 && day <= 30) {
-                    if (day >= 23) {
-                        horoscope = "Scorpio ";
-                    } else {
-                        horoscope = "Libra";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-            case 11:
-                if (day >= 1 && day <= 30) {
-                    if (day >= 22) {
-                        horoscope = "Sagittarius  ";
-                    } else {
-                        horoscope = "Scorpio";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-            case 12:
-                if (day >= 1 && day <= 31) {
-                    if (day >= 22) {
-                        horoscope = "Capricorn";
-                    } else {
-                        horoscope = "Sagittarius ";
-                    }
-                } else {
-                    isError = true;
-
-                }
-                break;
-
-            default:
+            } else {
                 isError = true;
+            }
+        } else if (month == 2) {
+            if (day >= 1 && day <= 29) {
+                if (day >= 20) {
+                    horoscope = "Pisces";
+                } else {
+                    horoscope = "Aquarius";
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month == 3) {
+            if (day >= 1 && day <= 31) {
+                if (day >= 21) {
+                    horoscope = "Aries";
+                } else {
+                    horoscope = "Pisces";
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month == 4) {
+            if (day >= 1 && day <= 30) {
+                if (day >= 21) {
+                    horoscope = "Taurus";
+                } else {
+                    horoscope = "Aries";
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month == 5) {
+            if (day >= 1 && day <= 31) {
+                if (day >= 21) {
+                    horoscope = "Gemini";
+                } else {
+                    horoscope = "Taurus";
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month == 6) {
+            if (day >= 1 && day <= 30) {
+                if (day >= 22) {
+                    horoscope = "Cancer";
+                } else {
+                    horoscope = "Gemini";
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month == 7) {
+            if (day >= 1 && day <= 31) {
+                if (day >= 23) {
+                    horoscope = "Leo";
+                } else {
+                    horoscope = "Cancer";
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month == 8) {
+            if (day >= 1 && day <= 31) {
+                if (day >= 23) {
+                    horoscope = "Virgo";
+                } else {
+                    horoscope = "Leo";
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month == 9) {
+            if (day >= 1 && day <= 30) {
+                if (day >= 23) {
+                    horoscope = "Libra";
+                } else {
+                    horoscope = "Virgo";
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month == 10) {
+            if (day >= 1 && day <= 31) {
+                if (day >= 23) {
+                    horoscope = "Scorpio";
+                } else {
+                    horoscope = "Libra";
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month == 11) {
+            if (day >= 1 && day <= 30) {
+                if (day >= 22) {
+                    horoscope = "Sagittarius";
+                } else {
+                    horoscope = "Scorpio";
+                }
+            } else {
+                isError = true;
+            }
+        } else if (month == 12) {
+            if (day >= 1 && day <= 31) {
+                if (day >= 22) {
+                    horoscope = "Capricorn";
+                } else {
+                    horoscope = "Sagittarius";
+                }
+            } else {
+                isError = true;
+            }
+        } else {
+            isError = true;
         }
 
-
-
         if (isError) {
-            System.out.println("You entered wrong information!");
+            System.out.println("You entered invalid information!");
         } else {
             System.out.println("Your horoscope: " + horoscope);
         }
