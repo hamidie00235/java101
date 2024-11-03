@@ -597,146 +597,194 @@ Pisces Horoscope : February 20 - March 20
 
 
 
-        int month, day;
-        Scanner input = new Scanner(System.in);
+//        int month, day;
+//        Scanner input = new Scanner(System.in);
+//
+//        System.out.print("Enter the month: ");
+//        month = input.nextInt();
+//
+//        System.out.print("Enter the day: ");
+//        day = input.nextInt();
+//
+//        String horoscope = "";
+//        boolean isError = false;
+//
+//        if (month == 1) {
+//            if (day >= 1 && day <= 31) {
+//                if (day >= 20) {
+//                    horoscope = "Aquarius";
+//                } else {
+//                    horoscope = "Capricorn";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 2) {
+//            if (day >= 1 && day <= 29) {
+//                if (day >= 20) {
+//                    horoscope = "Pisces";
+//                } else {
+//                    horoscope = "Aquarius";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 3) {
+//            if (day >= 1 && day <= 31) {
+//                if (day >= 21) {
+//                    horoscope = "Aries";
+//                } else {
+//                    horoscope = "Pisces";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 4) {
+//            if (day >= 1 && day <= 30) {
+//                if (day >= 21) {
+//                    horoscope = "Taurus";
+//                } else {
+//                    horoscope = "Aries";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 5) {
+//            if (day >= 1 && day <= 31) {
+//                if (day >= 21) {
+//                    horoscope = "Gemini";
+//                } else {
+//                    horoscope = "Taurus";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 6) {
+//            if (day >= 1 && day <= 30) {
+//                if (day >= 22) {
+//                    horoscope = "Cancer";
+//                } else {
+//                    horoscope = "Gemini";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 7) {
+//            if (day >= 1 && day <= 31) {
+//                if (day >= 23) {
+//                    horoscope = "Leo";
+//                } else {
+//                    horoscope = "Cancer";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 8) {
+//            if (day >= 1 && day <= 31) {
+//                if (day >= 23) {
+//                    horoscope = "Virgo";
+//                } else {
+//                    horoscope = "Leo";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 9) {
+//            if (day >= 1 && day <= 30) {
+//                if (day >= 23) {
+//                    horoscope = "Libra";
+//                } else {
+//                    horoscope = "Virgo";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 10) {
+//            if (day >= 1 && day <= 31) {
+//                if (day >= 23) {
+//                    horoscope = "Scorpio";
+//                } else {
+//                    horoscope = "Libra";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 11) {
+//            if (day >= 1 && day <= 30) {
+//                if (day >= 22) {
+//                    horoscope = "Sagittarius";
+//                } else {
+//                    horoscope = "Scorpio";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else if (month == 12) {
+//            if (day >= 1 && day <= 31) {
+//                if (day >= 22) {
+//                    horoscope = "Capricorn";
+//                } else {
+//                    horoscope = "Sagittarius";
+//                }
+//            } else {
+//                isError = true;
+//            }
+//        } else {
+//            isError = true;
+//        }
+//
+//        if (isError) {
+//            System.out.println("You entered invalid information!");
+//        } else {
+//            System.out.println("Your horoscope: " + horoscope);
+//        }
 
-        System.out.print("Enter the month: ");
-        month = input.nextInt();
 
-        System.out.print("Enter the day: ");
-        day = input.nextInt();
 
-        String horoscope = "";
-        boolean isError = false;
 
-        if (month == 1) {
-            if (day >= 1 && day <= 31) {
-                if (day >= 20) {
-                    horoscope = "Aquarius";
-                } else {
-                    horoscope = "Capricorn";
-                }
-            } else {
-                isError = true;
+
+        /*pratik 17
+
+         Uçak Bileti Fiyatı Hesaplama/
+         */
+
+        int km,age;
+       int  tripType ;
+       double perKm=0.1;
+
+        double totalPrice;
+        Scanner input =new Scanner(System.in);
+        System.out.print("Enter the km:");
+        km= input.nextInt();
+        System.out.print("enter your age:");
+        age= input.nextInt();
+        System.out.println("enter the trip type:");
+        tripType= input.nextInt();
+        if (km >= 0 && age >= 0 && (tripType == 1 || tripType == 2)) {
+             totalPrice= km * perKm;
+
+            if(age<12) {
+                totalPrice=km * perKm*0.5;
+            } 
+            else if (age >= 12 && age <= 24) {
+                totalPrice=km * perKm*0.9;
+                
+            } else if (age>65) {
+                totalPrice=km * perKm*0.7;
+                
             }
-        } else if (month == 2) {
-            if (day >= 1 && day <= 29) {
-                if (day >= 20) {
-                    horoscope = "Pisces";
-                } else {
-                    horoscope = "Aquarius";
-                }
-            } else {
-                isError = true;
-            }
-        } else if (month == 3) {
-            if (day >= 1 && day <= 31) {
-                if (day >= 21) {
-                    horoscope = "Aries";
-                } else {
-                    horoscope = "Pisces";
-                }
-            } else {
-                isError = true;
-            }
-        } else if (month == 4) {
-            if (day >= 1 && day <= 30) {
-                if (day >= 21) {
-                    horoscope = "Taurus";
-                } else {
-                    horoscope = "Aries";
-                }
-            } else {
-                isError = true;
-            }
-        } else if (month == 5) {
-            if (day >= 1 && day <= 31) {
-                if (day >= 21) {
-                    horoscope = "Gemini";
-                } else {
-                    horoscope = "Taurus";
-                }
-            } else {
-                isError = true;
-            }
-        } else if (month == 6) {
-            if (day >= 1 && day <= 30) {
-                if (day >= 22) {
-                    horoscope = "Cancer";
-                } else {
-                    horoscope = "Gemini";
-                }
-            } else {
-                isError = true;
-            }
-        } else if (month == 7) {
-            if (day >= 1 && day <= 31) {
-                if (day >= 23) {
-                    horoscope = "Leo";
-                } else {
-                    horoscope = "Cancer";
-                }
-            } else {
-                isError = true;
-            }
-        } else if (month == 8) {
-            if (day >= 1 && day <= 31) {
-                if (day >= 23) {
-                    horoscope = "Virgo";
-                } else {
-                    horoscope = "Leo";
-                }
-            } else {
-                isError = true;
-            }
-        } else if (month == 9) {
-            if (day >= 1 && day <= 30) {
-                if (day >= 23) {
-                    horoscope = "Libra";
-                } else {
-                    horoscope = "Virgo";
-                }
-            } else {
-                isError = true;
-            }
-        } else if (month == 10) {
-            if (day >= 1 && day <= 31) {
-                if (day >= 23) {
-                    horoscope = "Scorpio";
-                } else {
-                    horoscope = "Libra";
-                }
-            } else {
-                isError = true;
-            }
-        } else if (month == 11) {
-            if (day >= 1 && day <= 30) {
-                if (day >= 22) {
-                    horoscope = "Sagittarius";
-                } else {
-                    horoscope = "Scorpio";
-                }
-            } else {
-                isError = true;
-            }
-        } else if (month == 12) {
-            if (day >= 1 && day <= 31) {
-                if (day >= 22) {
-                    horoscope = "Capricorn";
-                } else {
-                    horoscope = "Sagittarius";
-                }
-            } else {
-                isError = true;
-            }
-        } else {
-            isError = true;
+            if(tripType==2){
+                totalPrice*=0.8;
+                totalPrice*=2;
+
         }
+            System.out.println("The total price is: " + totalPrice+ " TL");
+     
+            
+        }
+        else {
 
-        if (isError) {
-            System.out.println("You entered invalid information!");
-        } else {
-            System.out.println("Your horoscope: " + horoscope);
+            System.out.println("You entered the wrong data");
         }
     }
 }
