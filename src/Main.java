@@ -782,41 +782,82 @@ Pisces Horoscope : February 20 - March 20
 
 
          */
+//        int year;
+//        String horoscope = "";
+//
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Enter your birth year: ");
+//        year = input.nextInt();
+//
+//        int remainder = year % 12;
+//
+//        if (remainder == 0) {
+//            horoscope = "Monkey";
+//        } else if (remainder == 1) {
+//            horoscope = "Rooster";
+//        } else if (remainder == 2) {
+//            horoscope = "Dog";
+//        } else if (remainder == 3) {
+//            horoscope = "Pig";
+//        } else if (remainder == 4) {
+//            horoscope = "Rat";
+//        } else if (remainder == 5) {
+//            horoscope = "Ox";
+//        } else if (remainder == 6) {
+//            horoscope = "Tiger";
+//        } else if (remainder == 7) {
+//            horoscope = "Rabbit";
+//        } else if (remainder == 8) {
+//            horoscope = "Dragon";
+//        } else if (remainder == 9) {
+//            horoscope = "Snake";
+//        } else if (remainder == 10) {
+//            horoscope = "Horse";
+//        } else if (remainder == 11) {
+//            horoscope = "Sheep";
+//        }
+//
+//        System.out.println("Your Chinese Zodiac Sign: " + horoscope);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*pratik 18
+        Ödev - Artık Yıl Hesaplama
+
+        /
+         */
+
         int year;
-        String horoscope = "";
-
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter your birth year: ");
-        year = input.nextInt();
-
-        int remainder = year % 12;
-
-        if (remainder == 0) {
-            horoscope = "Monkey";
-        } else if (remainder == 1) {
-            horoscope = "Rooster";
-        } else if (remainder == 2) {
-            horoscope = "Dog";
-        } else if (remainder == 3) {
-            horoscope = "Pig";
-        } else if (remainder == 4) {
-            horoscope = "Rat";
-        } else if (remainder == 5) {
-            horoscope = "Ox";
-        } else if (remainder == 6) {
-            horoscope = "Tiger";
-        } else if (remainder == 7) {
-            horoscope = "Rabbit";
-        } else if (remainder == 8) {
-            horoscope = "Dragon";
-        } else if (remainder == 9) {
-            horoscope = "Snake";
-        } else if (remainder == 10) {
-            horoscope = "Horse";
-        } else if (remainder == 11) {
-            horoscope = "Sheep";
+        Scanner input =new Scanner(System.in);
+        System.out.print("Enter the year:");
+        year= input.nextInt();
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                // L'année est divisible par 100, il faut vérifier si elle est divisible par 400
+                if (year % 400 == 0) {
+                    System.out.println(year + " is a leap year.");
+                } else {
+                    System.out.println(year + " is not a leap year.");
+                }
+            } else {
+                // L'année est divisible par 4 mais pas par 100, donc elle est bissextile
+                System.out.println(year + " is a leap year.");
+            }
+        } else {
+            // L'année n'est pas divisible par 4, donc elle n'est pas bissextile
+            System.out.println(year + " is not a leap year.");
         }
-
-        System.out.println("Your Chinese Zodiac Sign: " + horoscope);
     }
 }
+
