@@ -19,7 +19,7 @@ public class Main {
 //        System.out.println(vInt);
 //        System.out.println(vLong);
 
-       // Char ve Boolean Veri Tipleri
+        // Char ve Boolean Veri Tipleri
 
 //      // char
 //        char c1='j';
@@ -37,7 +37,7 @@ public class Main {
 //        System.out.println(vStr);
 
         // temel operator
-       // mantiksal operator
+        // mantiksal operator
 //        int x=2,y=4,z=3;
 //        boolean result= x<y && z<x;
 //        boolean result1=z<y || z<x;
@@ -56,7 +56,6 @@ public class Main {
 //        System.out.println(in);
 //        System.out.println(doub);
 //        System.out.println(str);
-
 
 
 //        /// pratik 1
@@ -96,7 +95,7 @@ public class Main {
 
 
         /*  pratik 2
-        * kdv tutari hesaplayan program  odevi */
+         * kdv tutari hesaplayan program  odevi */
 //        Scanner fiyat  = new Scanner(System.in);
 //
 //        System.out.println("fiyatinzi Giriniz:");
@@ -112,8 +111,6 @@ public class Main {
 //        System.out.println("kdv orani:"+kdvOrani);
 //
 //        System.out.println("kdv'li toplam fiyat:"+kdvliToplamFiyat);
-
-
 
 
 //        /* pratik 3
@@ -139,7 +136,6 @@ public class Main {
 //
 //        double alan = Math.sqrt(u * (u - a) * (u - b) * (u - c));
 //        System.out.println("Üçgenin alanı:" + alan);
-
 
 
         /// pratik 4
@@ -172,11 +168,10 @@ Taksimetre açılış ücreti 10 TL'dir.*/
 
 
         /*pratik 5
-        *
-        *
-        * Dairenin Alanını ve Çevresini Hesaplayan Program
+         *
+         *
+         * Dairenin Alanını ve Çevresini Hesaplayan Program
          */
-
 
 
 //        double r,alan ,pi=3.14,alpha;
@@ -208,8 +203,6 @@ Taksimetre açılış ücreti 10 TL'dir.*/
 //        System.out.println("Vücut Kitle İndeksiniz:" +KTI);
 
 
-
-
 //        //pratik 7
 //        double armutFiyati = 2.14;
 //        double elmaFiyati = 3.67;
@@ -232,10 +225,6 @@ Taksimetre açılış ücreti 10 TL'dir.*/
 //               + (domatesFiyati * tomatesKilo) + (muzFiyati * muzKilo)
 //               + (patlicanFiyati * patlicanKilo);
 //        System.out.println("your total cost is:"+totalTutar+"TL");
-
-
-
-
 
 
 //        /* pratik8
@@ -596,7 +585,6 @@ Pisces Horoscope : February 20 - March 20
         * */
 
 
-
 //        int month, day;
 //        Scanner input = new Scanner(System.in);
 //
@@ -740,51 +728,95 @@ Pisces Horoscope : February 20 - March 20
 //        }
 
 
+//        /*pratik 17
+//
+//         Uçak Bileti Fiyatı Hesaplama/
+//         */
+//
+//        int km,age;
+//       int  tripType ;
+//       double perKm=0.1;
+//
+//        double totalPrice;
+//        Scanner input =new Scanner(System.in);
+//        System.out.print("Enter the km:");
+//        km= input.nextInt();
+//        System.out.print("enter your age:");
+//        age= input.nextInt();
+//        System.out.println("enter the trip type:");
+//        tripType= input.nextInt();
+//        if (km >= 0 && age >= 0 && (tripType == 1 || tripType == 2)) {
+//             totalPrice= km * perKm;
+//
+//            if(age<12) {
+//                totalPrice=km * perKm*0.5;
+//            }
+//            else if (age >= 12 && age <= 24) {
+//                totalPrice=km * perKm*0.9;
+//
+//            } else if (age>65) {
+//                totalPrice=km * perKm*0.7;
+//
+//            }
+//            if(tripType==2){
+//                totalPrice*=0.8;
+//                totalPrice*=2;
+//
+//        }
+//            System.out.println("The total price is: " + totalPrice+ " TL");
+//
+//
+//        }
+//        else {
+//
+//            System.out.println("You entered the wrong data");
+//        }
 
 
 
-        /*pratik 17
 
-         Uçak Bileti Fiyatı Hesaplama/
+
+
+        /*pratik18
+        /
+
+
          */
+        int year;
+        String horoscope = "";
 
-        int km,age;
-       int  tripType ;
-       double perKm=0.1;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your birth year: ");
+        year = input.nextInt();
 
-        double totalPrice;
-        Scanner input =new Scanner(System.in);
-        System.out.print("Enter the km:");
-        km= input.nextInt();
-        System.out.print("enter your age:");
-        age= input.nextInt();
-        System.out.println("enter the trip type:");
-        tripType= input.nextInt();
-        if (km >= 0 && age >= 0 && (tripType == 1 || tripType == 2)) {
-             totalPrice= km * perKm;
+        int remainder = year % 12;
 
-            if(age<12) {
-                totalPrice=km * perKm*0.5;
-            } 
-            else if (age >= 12 && age <= 24) {
-                totalPrice=km * perKm*0.9;
-                
-            } else if (age>65) {
-                totalPrice=km * perKm*0.7;
-                
-            }
-            if(tripType==2){
-                totalPrice*=0.8;
-                totalPrice*=2;
-
+        if (remainder == 0) {
+            horoscope = "Monkey";
+        } else if (remainder == 1) {
+            horoscope = "Rooster";
+        } else if (remainder == 2) {
+            horoscope = "Dog";
+        } else if (remainder == 3) {
+            horoscope = "Pig";
+        } else if (remainder == 4) {
+            horoscope = "Rat";
+        } else if (remainder == 5) {
+            horoscope = "Ox";
+        } else if (remainder == 6) {
+            horoscope = "Tiger";
+        } else if (remainder == 7) {
+            horoscope = "Rabbit";
+        } else if (remainder == 8) {
+            horoscope = "Dragon";
+        } else if (remainder == 9) {
+            horoscope = "Snake";
+        } else if (remainder == 10) {
+            horoscope = "Horse";
+        } else if (remainder == 11) {
+            horoscope = "Sheep";
         }
-            System.out.println("The total price is: " + totalPrice+ " TL");
-     
-            
-        }
-        else {
 
-            System.out.println("You entered the wrong data");
-        }
+        System.out.println("Your Chinese Zodiac Sign: " + horoscope);
     }
 }
