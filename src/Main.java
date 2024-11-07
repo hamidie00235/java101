@@ -838,26 +838,48 @@ Pisces Horoscope : February 20 - March 20
         /
          */
 
-        int year;
-        Scanner input =new Scanner(System.in);
-        System.out.print("Enter the year:");
-        year= input.nextInt();
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                // L'année est divisible par 100, il faut vérifier si elle est divisible par 400
-                if (year % 400 == 0) {
-                    System.out.println(year + " is a leap year.");
-                } else {
-                    System.out.println(year + " is not a leap year.");
-                }
-            } else {
-                // L'année est divisible par 4 mais pas par 100, donc elle est bissextile
-                System.out.println(year + " is a leap year.");
+//        int year;
+//        Scanner input =new Scanner(System.in);
+//        System.out.print("Enter the year:");
+//        year= input.nextInt();
+//        if (year % 4 == 0) {
+//            if (year % 100 == 0) {
+//                // L'année est divisible par 100, il faut vérifier si elle est divisible par 400
+//                if (year % 400 == 0) {
+//                    System.out.println(year + " is a leap year.");
+//                } else {
+//                    System.out.println(year + " is not a leap year.");
+//                }
+//            } else {
+//                // L'année est divisible par 4 mais pas par 100, donc elle est bissextile
+//                System.out.println(year + " is a leap year.");
+//            }
+//        } else {
+//            // L'année n'est pas divisible par 4, donc elle n'est pas bissextile
+//            System.out.println(year + " is not a leap year.");
+//        }
+
+
+
+
+
+
+        /*pratik 19
+
+        * */
+
+        int n;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        n = input.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
             }
-        } else {
-            // L'année n'est pas divisible par 4, donc elle n'est pas bissextile
-            System.out.println(year + " is not a leap year.");
         }
+
     }
 }
+
 
