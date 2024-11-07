@@ -868,15 +868,55 @@ Pisces Horoscope : February 20 - March 20
 
         * */
 
-        int n;
+//        int n;
+//        Scanner input = new Scanner(System.in);
+//        System.out.println("Enter the number:");
+//        n = input.nextInt();
+//
+//        for (int i = 1; i <= n; i++) {
+//            if (i % 2 == 0) {
+//                System.out.println(i);
+//            }
+//        }
+
+
+
+
+
+
+
+
+        /*pratik 20
+        Ödev
+Java döngüler ile 0'dan girilen sayıya
+ kadar olan sayılardan 3 ve 4'e tam bölünen sayıların
+ ortalamasını hesaplayan programı yazınız.
+        /
+         */
+        int n = 0;
+        double total = 0;
+        int count = 0;  // To keep track of the count of divisible numbers
         Scanner input = new Scanner(System.in);
+
+        // Prompt the user to enter a number
         System.out.println("Enter the number:");
         n = input.nextInt();
 
-        for (int i = 1; i <= n; i++) {
-            if (i % 2 == 0) {
-                System.out.println(i);
+        // Iterate from 0 to the entered number
+        for (int i = 0; i <= n; i++) {
+            // Check if i is divisible by both 3 and 4
+            if (i % 3 == 0 && i % 4 == 0) {
+                total += i;   // Add the number to total
+                count++;       // Increment the count
             }
+        }
+
+        // Check if any number divisible by both 3 and 4 was found
+        if (count > 0) {
+            double average = total / count;  // Calculate the average
+            System.out.println("Average: " + average);
+        } else {
+            System.out.println("No numbers divisible by 3 and 4.");
         }
 
     }
