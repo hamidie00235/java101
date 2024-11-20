@@ -893,33 +893,63 @@ Java döngüler ile 0'dan girilen sayıya
  ortalamasını hesaplayan programı yazınız.
         /
          */
-        int n = 0;
-        double total = 0;
-        int count = 0;  // To keep track of the count of divisible numbers
-        Scanner input = new Scanner(System.in);
+//        int n = 0;
+//        double total = 0;
+//        int count = 0;  // To keep track of the count of divisible numbers
+//        Scanner input = new Scanner(System.in);
+//
+//        // Prompt the user to enter a number
+//        System.out.println("Enter the number:");
+//        n = input.nextInt();
+//
+//        // Iterate from 0 to the entered number
+//        for (int i = 0; i <= n; i++) {
+//            // Check if i is divisible by both 3 and 4
+//            if (i % 3 == 0 && i % 4 == 0) {
+//                total += i;   // Add the number to total
+//                count++;       // Increment the count
+//            }
+//        }
+//
+//        // Check if any number divisible by both 3 and 4 was found
+//        if (count > 0) {
+//            double average = total / count;  // Calculate the average
+//            System.out.println("Average: " + average);
+//        } else {
+//            System.out.println("No numbers divisible by 3 and 4.");
+//        }
 
-        // Prompt the user to enter a number
-        System.out.println("Enter the number:");
-        n = input.nextInt();
 
-        // Iterate from 0 to the entered number
-        for (int i = 0; i <= n; i++) {
-            // Check if i is divisible by both 3 and 4
-            if (i % 3 == 0 && i % 4 == 0) {
-                total += i;   // Add the number to total
-                count++;       // Increment the count
+
+
+
+
+
+
+        /*pratik 21
+
+
+        /
+         */
+
+
+
+
+                int n;
+                int total = 0;
+                Scanner input = new Scanner(System.in); // Créez le Scanner en dehors de la boucle
+
+                do {
+                    System.out.println("Enter a number:");
+                    n = input.nextInt(); // Demande de l'entrée utilisateur
+
+                    if (n % 2 != 0) { // Si le nombre est impair
+                        total += n;
+                    }
+
+                } while (n > 0); // Continue tant que le nombre est positif
+
+                System.out.println("Total of odd numbers: " + total); // Affiche le total
+                input.close(); // Fermez le Scanner après utilisation
             }
         }
-
-        // Check if any number divisible by both 3 and 4 was found
-        if (count > 0) {
-            double average = total / count;  // Calculate the average
-            System.out.println("Average: " + average);
-        } else {
-            System.out.println("No numbers divisible by 3 and 4.");
-        }
-
-    }
-}
-
-
