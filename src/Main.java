@@ -866,7 +866,7 @@ Pisces Horoscope : February 20 - March 20
 
         /*pratik 19
 
-        * */
+         * */
 
 //        int n;
 //        Scanner input = new Scanner(System.in);
@@ -933,23 +933,40 @@ Java döngüler ile 0'dan girilen sayıya
          */
 
 
+//                int n;
+//                int total = 0;
+//                Scanner input = new Scanner(System.in); // Créez le Scanner en dehors de la boucle
+//
+//                do {
+//                    System.out.println("Enter a number:");
+//                    n = input.nextInt(); // Demande de l'entrée utilisateur
+//
+//                    if (n % 2 != 0) { // Si le nombre est impair
+//                        total += n;
+//                    }
+//
+//                } while (n > 0); // Continue tant que le nombre est positif
+//
+//                System.out.println("Total of odd numbers: " + total); // Affiche le total
+//                input.close(); // Fermez le Scanner après utilisation
 
 
-                int n;
-                int total = 0;
-                Scanner input = new Scanner(System.in); // Créez le Scanner en dehors de la boucle
+        // pratik 22
+        int n;
+        double total = 0;
+        Scanner scan = new Scanner(System.in);
 
-                do {
-                    System.out.println("Enter a number:");
-                    n = input.nextInt(); // Demande de l'entrée utilisateur
+        System.out.println("Enter the number (odd number to stop):");
+        n = scan.nextInt();
 
-                    if (n % 2 != 0) { // Si le nombre est impair
-                        total += n;
-                    }
-
-                } while (n > 0); // Continue tant que le nombre est positif
-
-                System.out.println("Total of odd numbers: " + total); // Affiche le total
-                input.close(); // Fermez le Scanner après utilisation
+        while (n % 2 == 0) { // Tek sayı girilene kadar çalışır
+            if (n % 4 == 0) { // Hem çift hem de 4'ün katı kontrolü
+                total += n;
             }
+            System.out.println("Enter the number (odd number to stop):");
+            n = scan.nextInt(); // Kullanıcıdan yeni giriş alınır
         }
+
+        System.out.println("The total of numbers divisible by 4: " + total);
+    }
+}
