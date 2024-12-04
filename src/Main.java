@@ -996,19 +996,39 @@ Java döngüler ile 0'dan girilen sayıya
 
 
 
-        //pratik 24
+        //pratik 24  C(n,r) = n! / (r! * (n-r)!)
 
 
 
-        int n,total=1;
+        int n,r=1;
+
         Scanner  input =new Scanner(System.in);
-        System.out.println("Enter a number:");
+        System.out.println("Enter the value of n:");
 
         n= input.nextInt();
-        for(int i=1 ;i<=n;i++){
-            total*=i;
+
+        System.out.println("Enter the value of r:");
+        r= input.nextInt();
+        if(r>n){
+            System.out.println("Error:r cannot be greater than n.");
         }
-        System.out.println(n+".factoriel :"+total);
+        else{
+            // let's calculate factorials:
+            int nfac=1, rfac=1,nMinusrFac=1;
+
+            for(int i=1;i<=n;i++){
+                nfac*=i;
+            }
+            for(int i =1;i<=r;i++){
+                rfac*=i;
+            }
+            for(int i=1;i<(n-r);i++){
+                nMinusrFac*=i;
+            }
+          // let's find combination
+            double c =(double) nfac/(rfac*nfac);
+            System.out.println("C(" + n + "," + r + ") = " + c);
+        }
 
     }
 }
