@@ -952,21 +952,38 @@ Java döngüler ile 0'dan girilen sayıya
 
 
         // pratik 22
+//        int n;
+//        double total = 0;
+//        Scanner scan = new Scanner(System.in);
+//
+//        System.out.println("Enter the number (odd number to stop):");
+//        n = scan.nextInt();
+//
+//        while (n % 2 == 0) { // Tek sayı girilene kadar çalışır
+//            if (n % 4 == 0) { // Hem çift hem de 4'ün katı kontrolü
+//                total += n;
+//            }
+//            System.out.println("Enter the number (odd number to stop):");
+//            n = scan.nextInt(); // Kullanıcıdan yeni giriş alınır
+//        }
+//
+//        System.out.println("The total of numbers divisible by 4: " + total);
+
+
+
+
+
+
+        // pratik 23
+
+
+
         int n;
-        double total = 0;
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("Enter the number (odd number to stop):");
-        n = scan.nextInt();
-
-        while (n % 2 == 0) { // Tek sayı girilene kadar çalışır
-            if (n % 4 == 0) { // Hem çift hem de 4'ün katı kontrolü
-                total += n;
-            }
-            System.out.println("Enter the number (odd number to stop):");
-            n = scan.nextInt(); // Kullanıcıdan yeni giriş alınır
+        Scanner scan =new Scanner(System.in);
+        System.out.println("Enter a number :");
+        n= scan.nextInt();
+        for(int i=1 ;i<=n;i*=2){
+            System.out.println(i);
         }
-
-        System.out.println("The total of numbers divisible by 4: " + total);
     }
 }
