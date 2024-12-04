@@ -978,19 +978,37 @@ Java döngüler ile 0'dan girilen sayıya
 
 
 
-        int n;
-        Scanner scan =new Scanner(System.in);
-        System.out.println("Enter a number :");
-        n= scan.nextInt();
+//        int n;
+//        Scanner scan =new Scanner(System.in);
+//        System.out.println("Enter a number :");
+//        n= scan.nextInt();
+//
+//        System.out.println("Powers of 4 up to " + n + ":");
+//        for (int i = 1; i <= n; i *= 4) { // 4'ün kuvvetleri
+//            System.out.println(i);
+//        }
+//
+//        System.out.println("Powers of 5 up to " + n + ":");
+//        for (int j = 1; j <= n; j *= 5) { // 5'in kuvvetleri
+//            System.out.println(j);
+//        }
 
-        System.out.println("Powers of 4 up to " + n + ":");
-        for (int i = 1; i <= n; i *= 4) { // 4'ün kuvvetleri
-            System.out.println(i);
-        }
 
-        System.out.println("Powers of 5 up to " + n + ":");
-        for (int j = 1; j <= n; j *= 5) { // 5'in kuvvetleri
-            System.out.println(j);
+
+
+        //pratik 24
+
+
+
+        int n,total=1;
+        Scanner  input =new Scanner(System.in);
+        System.out.println("Enter a number:");
+
+        n= input.nextInt();
+        for(int i=1 ;i<=n;i++){
+            total*=i;
         }
+        System.out.println(n+".factoriel :"+total);
+
     }
 }
