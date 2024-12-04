@@ -982,8 +982,15 @@ Java döngüler ile 0'dan girilen sayıya
         Scanner scan =new Scanner(System.in);
         System.out.println("Enter a number :");
         n= scan.nextInt();
-        for(int i=1 ;i<=n;i*=2){
+
+        System.out.println("Powers of 4 up to " + n + ":");
+        for (int i = 1; i <= n; i *= 4) { // 4'ün kuvvetleri
             System.out.println(i);
+        }
+
+        System.out.println("Powers of 5 up to " + n + ":");
+        for (int j = 1; j <= n; j *= 5) { // 5'in kuvvetleri
+            System.out.println(j);
         }
     }
 }
