@@ -1000,34 +1000,52 @@ Java döngüler ile 0'dan girilen sayıya
 
 
 
-        int n,r=1;
+//        int n,r=1;
+//
+//        Scanner  input =new Scanner(System.in);
+//        System.out.println("Enter the value of n:");
+//
+//        n= input.nextInt();
+//
+//        System.out.println("Enter the value of r:");
+//        r= input.nextInt();
+//        if(r>n){
+//            System.out.println("Error:r cannot be greater than n.");
+//        }
+//        else{
+//            // let's calculate factorials:
+//            int nfac=1, rfac=1,nMinusrFac=1;
+//
+//            for(int i=1;i<=n;i++){
+//                nfac*=i;
+//            }
+//            for(int i =1;i<=r;i++){
+//                rfac*=i;
+//            }
+//            for(int i=1;i<(n-r);i++){
+//                nMinusrFac*=i;
+//            }
+//          // let's find combination
+//            double c =(double) nfac/(rfac*nfac);
+//            System.out.println("C(" + n + "," + r + ") = " + c);
+//        }
 
-        Scanner  input =new Scanner(System.in);
-        System.out.println("Enter the value of n:");
 
-        n= input.nextInt();
 
-        System.out.println("Enter the value of r:");
-        r= input.nextInt();
-        if(r>n){
-            System.out.println("Error:r cannot be greater than n.");
-        }
-        else{
-            // let's calculate factorials:
-            int nfac=1, rfac=1,nMinusrFac=1;
+        // pratik 26
 
-            for(int i=1;i<=n;i++){
-                nfac*=i;
-            }
-            for(int i =1;i<=r;i++){
-                rfac*=i;
-            }
-            for(int i=1;i<(n-r);i++){
-                nMinusrFac*=i;
-            }
-          // let's find combination
-            double c =(double) nfac/(rfac*nfac);
-            System.out.println("C(" + n + "," + r + ") = " + c);
+        int n,k;
+        int total=1;
+
+        Scanner inp =new Scanner(System.in) ;
+        System.out.println("Enter the base number:");
+        n= inp.nextInt();
+        System.out.println("Enter the number exponent:");
+        k= inp.nextInt();
+
+        for(int i=1;i<=k;i++){
+            total*=n;
+            System.out.println("Answer:"+total);
         }
 
     }
