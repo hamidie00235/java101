@@ -1033,20 +1033,56 @@ Java döngüler ile 0'dan girilen sayıya
 
 
         // pratik 26
+//
+//        int n,k;
+//        int total=1;
+//
+//        Scanner inp =new Scanner(System.in) ;
+//        System.out.println("Enter the base number:");
+//        n= inp.nextInt();
+//        System.out.println("Enter the number exponent:");
+//        k= inp.nextInt();
+//
+//        for(int i=1;i<=k;i++){
+//            total*=n;
+//            System.out.println("Answer:"+total);
+//        }
 
-        int n,k;
-        int total=1;
 
-        Scanner inp =new Scanner(System.in) ;
-        System.out.println("Enter the base number:");
-        n= inp.nextInt();
-        System.out.println("Enter the number exponent:");
-        k= inp.nextInt();
+        // pratik 27
+        int number;
+        Scanner input = new Scanner(System.in);
 
-        for(int i=1;i<=k;i++){
-            total*=n;
-            System.out.println("Answer:"+total);
+        // Kullanıcıdan sayı alıyoruz
+        System.out.print("Enter the number: ");
+        number = input.nextInt();
+
+        int basNumber = 0, tempNumber = number, basValue, result = 0;
+
+        // Basamak sayısını hesaplama
+        while (tempNumber != 0) {
+            tempNumber /= 10;
+            basNumber++;
         }
 
+        tempNumber = number;
+
+        // Basamak değerlerinin basamak sayısı üssünü hesaplama
+        while (tempNumber != 0) {
+            basValue = tempNumber % 10;
+            int basPow = 1; // Her basamak için üslü hesaplama sıfırlanır
+            for (int i = 1; i <= basNumber; i++) {
+                basPow *= basValue;
+            }
+            result += basPow; // Sonuca ekleme
+            tempNumber /= 10; // Bir sonraki basamağa geç
+        }
+
+        // Armstrong sayısı kontrolü
+        if (result == number) {
+            System.out.println(number + " is an Armstrong number.");
+        } else {
+            System.out.println(number + " is not an Armstrong number.");
+        }
     }
 }
