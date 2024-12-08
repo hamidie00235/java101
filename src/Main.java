@@ -1050,39 +1050,22 @@ Java döngüler ile 0'dan girilen sayıya
 
 
         // pratik 27
-        int number;
         Scanner input = new Scanner(System.in);
 
-        // Kullanıcıdan sayı alıyoruz
-        System.out.print("Enter the number: ");
-        number = input.nextInt();
+        System.out.print("Enter a number: ");
+        int number = input.nextInt(); // Kullanıcıdan giriş al
 
-        int basNumber = 0, tempNumber = number, basValue, result = 0;
+        int sum = 0;  // Basamak toplamını tutacak değişken
+        int tempNumber = Math.abs(number); // Negatif sayı için mutlak değer alınır
 
-        // Basamak sayısını hesaplama
+        // Basamakları toplama
         while (tempNumber != 0) {
-            tempNumber /= 10;
-            basNumber++;
+            sum += tempNumber % 10; // Son basamağı al ve toplama ekle
+            tempNumber /= 10; // Son basamağı kaldır
         }
 
-        tempNumber = number;
-
-        // Basamak değerlerinin basamak sayısı üssünü hesaplama
-        while (tempNumber != 0) {
-            basValue = tempNumber % 10;
-            int basPow = 1; // Her basamak için üslü hesaplama sıfırlanır
-            for (int i = 1; i <= basNumber; i++) {
-                basPow *= basValue;
-            }
-            result += basPow; // Sonuca ekleme
-            tempNumber /= 10; // Bir sonraki basamağa geç
-        }
-
-        // Armstrong sayısı kontrolü
-        if (result == number) {
-            System.out.println(number + " is an Armstrong number.");
-        } else {
-            System.out.println(number + " is not an Armstrong number.");
-        }
+        // Sonucu yazdır
+        System.out.println("The sum of the digits of " + number + " is: " + sum);
     }
 }
+
