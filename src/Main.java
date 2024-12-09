@@ -1050,22 +1050,39 @@ Java döngüler ile 0'dan girilen sayıya
 
 
         // pratik 27
-        Scanner input = new Scanner(System.in);
+//        Scanner input = new Scanner(System.in);
+//
+//        System.out.print("Enter a number: ");
+//        int number = input.nextInt(); // Kullanıcıdan giriş al
+//
+//        int sum = 0;  // Basamak toplamını tutacak değişken
+//        int tempNumber = Math.abs(number); // Negatif sayı için mutlak değer alınır
+//
+//        // Basamakları toplama
+//        while (tempNumber != 0) {
+//            sum += tempNumber % 10; // Son basamağı al ve toplama ekle
+//            tempNumber /= 10; // Son basamağı kaldır
+//        }
+//
+//        // Sonucu yazdır
+//        System.out.println("The sum of the digits of " + number + " is: " + sum);
 
-        System.out.print("Enter a number: ");
-        int number = input.nextInt(); // Kullanıcıdan giriş al
 
-        int sum = 0;  // Basamak toplamını tutacak değişken
-        int tempNumber = Math.abs(number); // Negatif sayı için mutlak değer alınır
 
-        // Basamakları toplama
-        while (tempNumber != 0) {
-            sum += tempNumber % 10; // Son basamağı al ve toplama ekle
-            tempNumber /= 10; // Son basamağı kaldır
+
+
+        // pratik 28
+
+        Scanner scan =new Scanner(System.in);
+        System.out.print("Enter the number N:");
+        int n= scan.nextInt();
+        double result=0;
+        for(double  i =1;i<=n;i++){
+            result+=(1/i);
+
+
         }
-
-        // Sonucu yazdır
-        System.out.println("The sum of the digits of " + number + " is: " + sum);
+        System.out.println("the result is :"+result);
     }
 }
 
