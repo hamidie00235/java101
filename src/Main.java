@@ -1088,21 +1088,69 @@ Java döngüler ile 0'dan girilen sayıya
 
 
 
-        //pratik 29
+//        //pratik 29
+//
+//
+//        Scanner input =new Scanner(System.in);
+//        System.out.println("Enter N:");
+//        int n= input.nextInt();
+//        for(int i=1;i<=n;i++){
+//            for(int k=1;k<=(n-i);k++){
+//                System.out.print(" ");
+//            }
+//            for(int j=1;j<=(2*i)-1;j++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
 
 
-        Scanner input =new Scanner(System.in);
-        System.out.println("Enter N:");
-        int n= input.nextInt();
-        for(int i=1;i<=n;i++){
-            for(int k=1;k<=(n-i);k++){
-                System.out.print(" ");
+
+
+
+        // pratik 30 odev elmas
+
+
+
+                Scanner scanner = new Scanner(System.in);
+
+                // Kullanıcıdan elmasın yüksekliğini alın (bir yarısı için)
+                System.out.print("Elmasın yüksekliğini girin (pozitif bir sayı): ");
+                int height = scanner.nextInt();
+
+                // Üst üçgen (elmasın üst kısmı)
+                for (int i = 1; i <= height; i++) {
+                    // Boşluklar
+                    for (int j = 1; j <= height - i; j++) {
+                        System.out.print(" ");
+                    }
+
+                    // Yıldızlar
+                    for (int j = 1; j <= 2 * i - 1; j++) {
+                        System.out.print("*");
+                    }
+
+                    System.out.println();
+                }
+
+                // Alt üçgen (elmasın alt kısmı)
+                for (int i = height - 1; i >= 1; i--) {
+                    // Boşluklar
+                    for (int j = 1; j <= height - i; j++) {
+                        System.out.print(" ");
+                    }
+
+                    // Yıldızlar
+                    for (int j = 1; j <= 2 * i - 1; j++) {
+                        System.out.print("*");
+                    }
+
+                    System.out.println();
+                }
+
+                scanner.close();
             }
-            for(int j=1;j<=(2*i)-1;j++){
-                System.out.print("*");
-            }
-            System.out.println();
         }
-    }
-}
+
+
 
