@@ -1071,18 +1071,38 @@ Java döngüler ile 0'dan girilen sayıya
 
 
 
-        // pratik 28
+//        // pratik 28
+//
+//        Scanner scan =new Scanner(System.in);
+//        System.out.print("Enter the number N:");
+//        int n= scan.nextInt();
+//        double result=0;
+//        for(double  i =1;i<=n;i++){
+//            result+=(1/i);
+//
+//
+//        }
+//        System.out.println("the result is :"+result);
 
-        Scanner scan =new Scanner(System.in);
-        System.out.print("Enter the number N:");
-        int n= scan.nextInt();
-        double result=0;
-        for(double  i =1;i<=n;i++){
-            result+=(1/i);
 
 
+
+
+        //pratik 29
+
+
+        Scanner input =new Scanner(System.in);
+        System.out.println("Enter N:");
+        int n= input.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int k=1;k<=(n-i);k++){
+                System.out.print(" ");
+            }
+            for(int j=1;j<=(2*i)-1;j++){
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        System.out.println("the result is :"+result);
     }
 }
 
