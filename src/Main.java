@@ -1132,68 +1132,98 @@ Java döngüler ile 0'dan girilen sayıya
 
         // pratik 31
 
-
         String userName, password;
         Scanner input = new Scanner(System.in);
 
         int right = 3;
         int balance = 1500;
-        int select;
+        int select = 0;
 
         while (right > 0) {
-            System.out.print("your userName:");
+            System.out.print("Your username: ");
             userName = input.nextLine();
-            System.out.print("your password:");
+            System.out.print("Your password: ");
             password = input.nextLine();
+
             if (userName.equals("patika") && password.equals("dev123")) {
                 System.out.println("Welcome to your ZZZ Bank!");
                 do {
-
-                    System.out.println("1- Deposit Money\n" +
+                    System.out.println("\n1- Deposit Money\n" +
                             "2- Withdraw Money\n" +
                             "3- Check Balance\n" +
                             "4- Exit");
-                    System.out.println("Select an option:");
-                    select = input.nextInt();
-                    if(select==1) {
-                        System.out.println("amount of money");
-                        int price=input.nextInt();
-                        balance+=price;
+                    System.out.print("Select an option: ");
 
-                    } else if (select==2) {
-                        System.out.println("amount of money");
-                        int price=input.nextInt();
-                      if (price>balance){
-                          System.out.println("Insufficient amount");
-                      }
-                      else {
-                        balance-=price;
-                      }
-
-
-                    } else if (select==3) {
-                        System.out.println("Check balance:" +balance);
-
+                    // Validate input to prevent crashes
+                    if (!input.hasNextInt()) {
+                        System.out.println("Invalid input. Please enter a number between 1 and 4.");
+                        input.next(); // Clear invalid input
+                        continue;
                     }
 
-                }
-                while (select != 4);
-                System.out.println("See you again");
+                    select = input.nextInt();
+
+                    switch (select) {
+                        case 1:
+                            System.out.print("Enter deposit amount: ");
+                            if (input.hasNextInt()) {
+                                int deposit = input.nextInt();
+                                if (deposit > 0) {
+                                    balance += deposit;
+                                    System.out.println("Successfully deposited. New balance: " + balance);
+                                } else {
+                                    System.out.println("Invalid amount. Please enter a positive value.");
+                                }
+                            } else {
+                                System.out.println("Invalid input. Transaction cancelled.");
+                                input.next(); // Clear invalid input
+                            }
+                            break;
+
+                        case 2:
+                            System.out.print("Enter withdrawal amount: ");
+                            if (input.hasNextInt()) {
+                                int withdrawal = input.nextInt();
+                                if (withdrawal > balance) {
+                                    System.out.println("Insufficient balance.");
+                                } else if (withdrawal > 0) {
+                                    balance -= withdrawal;
+                                    System.out.println("Successfully withdrawn. New balance: " + balance);
+                                } else {
+                                    System.out.println("Invalid amount. Please enter a positive value.");
+                                }
+                            } else {
+                                System.out.println("Invalid input. Transaction cancelled.");
+                                input.next(); // Clear invalid input
+                            }
+                            break;
+
+                        case 3:
+                            System.out.println("Your balance: " + balance);
+                            break;
+
+                        case 4:
+                            System.out.println("Exiting... See you again!");
+                            break;
+
+                        default:
+                            System.out.println("Invalid selection. Please choose a valid option.");
+                            break;
+                    }
+                } while (select!= 4);
                 break;
+
             } else {
                 right--;
-                System.out.println("wrong user name or password entered , try again");
+                System.out.println("Wrong username or password. Please try again.");
                 if (right == 0) {
-                    System.out.println("your count is blocked , please contact your bank ");
+                    System.out.println("Your account is blocked. Please contact your bank.");
                 } else {
-                    System.out.println("rest right:" + right);
+                    System.out.println("Remaining attempts: " + right);
                 }
-
-
             }
         }
-    }}
 
-
-
-
+        input.close();
+    }
+}
