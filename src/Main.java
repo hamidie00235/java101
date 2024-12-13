@@ -970,12 +970,7 @@ Java döngüler ile 0'dan girilen sayıya
 //        System.out.println("The total of numbers divisible by 4: " + total);
 
 
-
-
-
-
         // pratik 23
-
 
 
 //        int n;
@@ -994,10 +989,7 @@ Java döngüler ile 0'dan girilen sayıya
 //        }
 
 
-
-
         //pratik 24  C(n,r) = n! / (r! * (n-r)!)
-
 
 
 //        int n,r=1;
@@ -1029,7 +1021,6 @@ Java döngüler ile 0'dan girilen sayıya
 //            double c =(double) nfac/(rfac*nfac);
 //            System.out.println("C(" + n + "," + r + ") = " + c);
 //        }
-
 
 
         // pratik 26
@@ -1068,9 +1059,6 @@ Java döngüler ile 0'dan girilen sayıya
 //        System.out.println("The sum of the digits of " + number + " is: " + sum);
 
 
-
-
-
 //        // pratik 28
 //
 //        Scanner scan =new Scanner(System.in);
@@ -1083,9 +1071,6 @@ Java döngüler ile 0'dan girilen sayıya
 //
 //        }
 //        System.out.println("the result is :"+result);
-
-
-
 
 
 //        //pratik 29
@@ -1105,52 +1090,110 @@ Java döngüler ile 0'dan girilen sayıya
 //        }
 
 
-
-
-
         // pratik 30 odev elmas
 
 
+//                Scanner scanner = new Scanner(System.in);
+//
+//                // Kullanıcıdan elmasın yüksekliğini alın (bir yarısı için)
+//                System.out.print("Elmasın yüksekliğini girin (pozitif bir sayı): ");
+//                int height = scanner.nextInt();
+//
+//                // Üst üçgen (elmasın üst kısmı)
+//                for (int i = 1; i <= height; i++) {
+//                    // Boşluklar
+//                    for (int j = 1; j <= height - i; j++) {
+//                        System.out.print(" ");
+//                    }
+//
+//                    // Yıldızlar
+//                    for (int j = 1; j <= 2 * i - 1; j++) {
+//                        System.out.print("*");
+//                    }
+//
+//                    System.out.println();
+//                }
+//
+//                // Alt üçgen (elmasın alt kısmı)
+//                for (int i = height - 1; i >= 1; i--) {
+//                    // Boşluklar
+//                    for (int j = 1; j <= height - i; j++) {
+//                        System.out.print(" ");
+//                    }
+//
+//                    // Yıldızlar
+//                    for (int j = 1; j <= 2 * i - 1; j++) {
+//                        System.out.print("*");
+//                    }
+//
+//                    System.out.println();
+//                }
 
-                Scanner scanner = new Scanner(System.in);
 
-                // Kullanıcıdan elmasın yüksekliğini alın (bir yarısı için)
-                System.out.print("Elmasın yüksekliğini girin (pozitif bir sayı): ");
-                int height = scanner.nextInt();
+        // pratik 31
 
-                // Üst üçgen (elmasın üst kısmı)
-                for (int i = 1; i <= height; i++) {
-                    // Boşluklar
-                    for (int j = 1; j <= height - i; j++) {
-                        System.out.print(" ");
+
+        String userName, password;
+        Scanner input = new Scanner(System.in);
+
+        int right = 3;
+        int balance = 1500;
+        int select;
+
+        while (right > 0) {
+            System.out.print("your userName:");
+            userName = input.nextLine();
+            System.out.print("your password:");
+            password = input.nextLine();
+            if (userName.equals("patika") && password.equals("dev123")) {
+                System.out.println("Welcome to your ZZZ Bank!");
+                do {
+
+                    System.out.println("1- Deposit Money\n" +
+                            "2- Withdraw Money\n" +
+                            "3- Check Balance\n" +
+                            "4- Exit");
+                    System.out.println("Select an option:");
+                    select = input.nextInt();
+                    if(select==1) {
+                        System.out.println("amount of money");
+                        int price=input.nextInt();
+                        balance+=price;
+
+                    } else if (select==2) {
+                        System.out.println("amount of money");
+                        int price=input.nextInt();
+                      if (price>balance){
+                          System.out.println("Insufficient amount");
+                      }
+                      else {
+                        balance-=price;
+                      }
+
+
+                    } else if (select==3) {
+                        System.out.println("Check balance:" +balance);
+
                     }
 
-                    // Yıldızlar
-                    for (int j = 1; j <= 2 * i - 1; j++) {
-                        System.out.print("*");
-                    }
-
-                    System.out.println();
+                }
+                while (select != 4);
+                System.out.println("See you again");
+                break;
+            } else {
+                right--;
+                System.out.println("wrong user name or password entered , try again");
+                if (right == 0) {
+                    System.out.println("your count is blocked , please contact your bank ");
+                } else {
+                    System.out.println("rest right:" + right);
                 }
 
-                // Alt üçgen (elmasın alt kısmı)
-                for (int i = height - 1; i >= 1; i--) {
-                    // Boşluklar
-                    for (int j = 1; j <= height - i; j++) {
-                        System.out.print(" ");
-                    }
 
-                    // Yıldızlar
-                    for (int j = 1; j <= 2 * i - 1; j++) {
-                        System.out.print("*");
-                    }
-
-                    System.out.println();
-                }
-
-                scanner.close();
             }
         }
+    }}
+
 
 
 
