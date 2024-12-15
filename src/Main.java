@@ -1231,27 +1231,23 @@ Java döngüler ile 0'dan girilen sayıya
         int n1= input.nextInt();
         System.out.println("Enter the number N2:");
         int n2= input.nextInt();
+        int i=1;
         int ebob=1;
-        for(int i=1;i<=n1;i++){
+        while (n2>=n1){
             if(n1%i==0 && n2%i==0){
                 ebob=i;
-                System.out.println("the ebob is :"+ebob);
-                break;
-            }
 
+                System.out.println("the ebob is :"+ebob);
+
+
+            }
+            i++;
+break;
         }
 
 // ekok
 
-        System.out.print("enter n3");
-        int n3= input.nextInt();
-        System.out.print("enter n4");
-        int n4= input.nextInt();
-        for(int i=1;i<(n3*n4);i++){
-            if(i%n3==0 && i%n4==0){
-                System.out.println("result:"+i);
-            }
-        }
+
 
     }
 }
