@@ -1225,28 +1225,60 @@ Java döngüler ile 0'dan girilen sayıya
 //        }
 
 
-        // pratik 32
-        Scanner input =new Scanner(System.in);
-        System.out.println("Enter the number N1:");
-        int n1= input.nextInt();
-        System.out.println("Enter the number N2:");
-        int n2= input.nextInt();
-        int i=1;
-        int ebob=1;
-        while (n2>=n1){
-            if(n1%i==0 && n2%i==0){
-                ebob=i;
+//        // pratik 32
+//        Scanner input =new Scanner(System.in);
+//        System.out.println("Enter the number N1:");
+//        int n1= input.nextInt();
+//        System.out.println("Enter the number N2:");
+//        int n2= input.nextInt();
+//        int i=1;
+//        int ebob=1;
+//        while (n2>=n1){
+//            if(n1%i==0 && n2%i==0){
+//                ebob=i;
+//
+//                System.out.println("the ebob is :"+ebob);
+//
+//
+//            }
+//            i++;
+//break;
+//        }
+//
+//// ekok
 
-                System.out.println("the ebob is :"+ebob);
+
+        // pratik 33
 
 
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("How many numbers will you enter? ");
+        int n = input.nextInt();
+
+        if (n <= 0) {
+            System.out.println("Please enter a positive number.");
+        } else {
+            System.out.print("Enter number 1: ");
+            int firstNumber = input.nextInt();
+            int max = firstNumber;
+            int min = firstNumber;
+
+            for (int i = 2; i <= n; i++) {
+                System.out.print("Enter number " + i + ": ");
+                int num = input.nextInt();
+
+                if (num > max) {
+                    max = num;
+                }
+                if (num < min) {
+                    min = num;
+                }
             }
-            i++;
-break;
+
+            System.out.println("The largest number is: " + max);
+            System.out.println("The smallest number is: " + min);
         }
-
-// ekok
-
 
 
     }
