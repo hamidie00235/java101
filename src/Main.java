@@ -1251,34 +1251,60 @@ Java döngüler ile 0'dan girilen sayıya
         // pratik 33
 
 
-        Scanner input = new Scanner(System.in);
+//        Scanner input = new Scanner(System.in);
+//
+//        System.out.print("How many numbers will you enter? ");
+//        int n = input.nextInt();
+//
+//        if (n <= 0) {
+//            System.out.println("Please enter a positive number.");
+//        } else {
+//            System.out.print("Enter number 1: ");
+//            int firstNumber = input.nextInt();
+//            int max = firstNumber;
+//            int min = firstNumber;
+//
+//            for (int i = 2; i <= n; i++) {
+//                System.out.print("Enter number " + i + ": ");
+//                int num = input.nextInt();
+//
+//                if (num > max) {
+//                    max = num;
+//                }
+//                if (num < min) {
+//                    min = num;
+//                }
+//            }
+//
+//            System.out.println("The largest number is: " + max);
+//            System.out.println("The smallest number is: " + min);
+//        }
 
-        System.out.print("How many numbers will you enter? ");
-        int n = input.nextInt();
 
-        if (n <= 0) {
-            System.out.println("Please enter a positive number.");
-        } else {
-            System.out.print("Enter number 1: ");
-            int firstNumber = input.nextInt();
-            int max = firstNumber;
-            int min = firstNumber;
 
-            for (int i = 2; i <= n; i++) {
-                System.out.print("Enter number " + i + ": ");
-                int num = input.nextInt();
+        //pratik 34
 
-                if (num > max) {
-                    max = num;
-                }
-                if (num < min) {
-                    min = num;
-                }
+        Scanner input =new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
+        int sum = 0;
+
+        // Proper divisors are calculated
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
+                sum += i;
             }
-
-            System.out.println("The largest number is: " + max);
-            System.out.println("The smallest number is: " + min);
         }
+
+
+        if(sum==number && number>0){
+            System.out.println(number+ "the entered number is a perfect number");
+        }
+        else {
+            System.out.println(number+ "the entered number is not  a perfect number");
+        }
+
 
 
     }
