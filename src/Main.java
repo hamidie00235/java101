@@ -1282,29 +1282,49 @@ Java döngüler ile 0'dan girilen sayıya
 
 
 
-        //pratik 34
+//        //pratik 34
+//
+//        Scanner input =new Scanner(System.in);
+//
+//        System.out.print("Enter a number: ");
+//        int number = input.nextInt();
+//        int sum = 0;
+//
+//        // Proper divisors are calculated
+//        for (int i = 1; i < number; i++) {
+//            if (number % i == 0) {
+//                sum += i;
+//            }
+//        }
+//
+//
+//        if(sum==number && number>0){
+//            System.out.println(number+ "the entered number is a perfect number");
+//        }
+//        else {
+//            System.out.println(number+ "the entered number is not  a perfect number");
+//        }
 
-        Scanner input =new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
-        int number = input.nextInt();
-        int sum = 0;
+       /*pratik 35
+       * Java ile basamak sayısının kullanıcıdan alınan ve döngüler kullanılarak,
+       *  yıldızlar(*) ile ekrana ters üçgen çizen programı yazın
+       * */
 
-        // Proper divisors are calculated
-        for (int i = 1; i < number; i++) {
-            if (number % i == 0) {
-                sum += i;
+        Scanner scanner =new Scanner(System.in);
+
+        System.out.print("Enter a integer:");
+        int n= scanner.nextInt();
+
+        for(int i=n; i>0; i--){
+            for(int k=0;k<(n-i);k++){
+                System.out.print(" ");
             }
+            for(int j=0;j<(2*i-1);j++){
+                System.out.print("*");
+            }
+            System.out.println();
         }
-
-
-        if(sum==number && number>0){
-            System.out.println(number+ "the entered number is a perfect number");
-        }
-        else {
-            System.out.println(number+ "the entered number is not  a perfect number");
-        }
-
 
 
     }
