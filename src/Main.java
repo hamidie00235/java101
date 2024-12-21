@@ -1311,21 +1311,42 @@ Java döngüler ile 0'dan girilen sayıya
        *  yıldızlar(*) ile ekrana ters üçgen çizen programı yazın
        * */
 
-        Scanner scanner =new Scanner(System.in);
+//        Scanner scanner =new Scanner(System.in);
+//
+//        System.out.print("Enter a integer:");
+//        int n= scanner.nextInt();
+//
+//        for(int i=n; i>0; i--){
+//            for(int k=0;k<(n-i);k++){
+//                System.out.print(" ");
+//            }
+//            for(int j=0;j<(2*i-1);j++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
 
-        System.out.print("Enter a integer:");
-        int n= scanner.nextInt();
+        //pratik 36
 
-        for(int i=n; i>0; i--){
-            for(int k=0;k<(n-i);k++){
-                System.out.print(" ");
+        System.out.println("Prime numbers between 1 and 100:");
+
+        for (int number = 2; number <= 100; number++) {
+            boolean isPrime = true;
+
+            for (int divisor = 2; divisor < number; divisor++) {
+                if (number % divisor == 0) {
+                    isPrime = false;
+                    break;
+                }
             }
-            for(int j=0;j<(2*i-1);j++){
-                System.out.print("*");
+
+            if (isPrime) {
+                System.out.print(number + " ");
             }
-            System.out.println();
         }
-
-
     }
 }
+
+
+
+
