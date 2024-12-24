@@ -1328,24 +1328,47 @@ Java döngüler ile 0'dan girilen sayıya
 
         //pratik 36
 
-        System.out.println("Prime numbers between 1 and 100:");
+//        System.out.println("Prime numbers between 1 and 100:");
+//
+//        for (int number = 2; number <= 100; number++) {
+//            boolean isPrime = true;
+//
+//            for (int divisor = 2; divisor < number; divisor++) {
+//                if (number % divisor == 0) {
+//                    isPrime = false;
+//                    break;
+//                }
+//            }
+//
+//            if (isPrime) {
+//                System.out.print(number + " ");
+//            }
+//        }
 
-        for (int number = 2; number <= 100; number++) {
-            boolean isPrime = true;
 
-            for (int divisor = 2; divisor < number; divisor++) {
-                if (number % divisor == 0) {
-                    isPrime = false;
-                    break;
-                }
-            }
 
-            if (isPrime) {
-                System.out.print(number + " ");
-            }
+        //pratik 38
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of Fibonacci series elements: ");
+        int n = scanner.nextInt();
+
+        int first = 0, second = 1;
+
+        System.out.print("Fibonacci Series: " + first + " " + second);
+
+        for (int i = 2; i < n; i++) {
+            int next = first + second;
+            System.out.print(" " + next);
+            first = second;
+            second = next;
         }
+
+        scanner.close();
     }
 }
+
 
 
 
