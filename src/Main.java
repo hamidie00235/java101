@@ -1375,27 +1375,41 @@ Java döngüler ile 0'dan girilen sayıya
 
         // pratik 39
 
-        System.out.println(isPaliandrome(458));
+//        System.out.println(isPaliandrome(458));
+//    }
+//
+//    static  boolean isPaliandrome(int number){
+//        int temp=number,reverseNumber=0,lastNumber;
+//
+//        while(temp!=0){
+//            lastNumber=temp%10;
+//            reverseNumber=(reverseNumber*10) +lastNumber;
+//            temp/=10;
+//        }
+//        if(number==reverseNumber){
+//            return true;
+//
+//        }
+//        else {
+//            return false;
+//        }
+
+
+        //pratik 40
+
+
+        System.out.println(fibonacci(6));
+    }
+    static  int fibonacci(int n){
+     if(n==1||n==2) {
+         return 1;
+     }
+     return fibonacci(n-1)+fibonacci(n-2);
+
+
     }
 
-    static  boolean isPaliandrome(int number){
-        int temp=number,reverseNumber=0,lastNumber;
 
-        while(temp!=0){
-            lastNumber=temp%10;
-            reverseNumber=(reverseNumber*10) +lastNumber;
-            temp/=10;
-        }
-        if(number==reverseNumber){
-            return true;
-
-        }
-        else {
-            return false;
-        }
-
-
-    }
 }
 
 
