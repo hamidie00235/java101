@@ -1,6 +1,12 @@
 import  java.util.Scanner;
 public class Main {
+
+
+
+
     public static void main(String[] args) {
+
+
 
 //        int width=10;
 //        int length =13;
@@ -1349,25 +1355,49 @@ Java döngüler ile 0'dan girilen sayıya
 
         //pratik 38
 
-        Scanner scanner = new Scanner(System.in);
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.print("Enter the number of Fibonacci series elements: ");
+//        int n = scanner.nextInt();
+//
+//        int first = 0, second = 1;
+//
+//        System.out.print("Fibonacci Series: " + first + " " + second);
+//
+//        for (int i = 2; i < n; i++) {
+//            int next = first + second;
+//            System.out.print(" " + next);
+//            first = second;
+//            second = next;
+//        }
 
-        System.out.print("Enter the number of Fibonacci series elements: ");
-        int n = scanner.nextInt();
 
-        int first = 0, second = 1;
 
-        System.out.print("Fibonacci Series: " + first + " " + second);
+        // pratik 39
 
-        for (int i = 2; i < n; i++) {
-            int next = first + second;
-            System.out.print(" " + next);
-            first = second;
-            second = next;
+        System.out.println(isPaliandrome(458));
+    }
+
+    static  boolean isPaliandrome(int number){
+        int temp=number,reverseNumber=0,lastNumber;
+
+        while(temp!=0){
+            lastNumber=temp%10;
+            reverseNumber=(reverseNumber*10) +lastNumber;
+            temp/=10;
+        }
+        if(number==reverseNumber){
+            return true;
+
+        }
+        else {
+            return false;
         }
 
-        scanner.close();
+
     }
 }
+
 
 
 
