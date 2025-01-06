@@ -1397,17 +1397,120 @@ Java döngüler ile 0'dan girilen sayıya
 
         //pratik 40
 
+//
+//        System.out.println(fibonacci(6));
+//    }
+//    static  int fibonacci(int n){
+//     if(n==1||n==2) {
+//         return 1;
+//     }
+//     return fibonacci(n-1)+fibonacci(n-2);
 
-        System.out.println(fibonacci(6));
+
+
+
+        //pratik 41
+
+
+
+
+
+
+        Scanner input =new Scanner(System.in);
+        int select;
+        String menu="1-addition operation\n "
+                +"2-subtraction\n"
+                +"3-multiplication\n"
+                +"4-division\n"
+                +"5-power\n"
+                +"6-mod\n"
+                +"7-Calculation area and perimeter\n"
+                +"0-exit";
+        System.out.println(menu);
+        while(true){
+
+            System.out.println("select an operation:");
+            select= input.nextInt();
+            if(select==0){
+                break;
+            }
+            System.out.print("Enter the first number:");
+            int a= input.nextInt();
+            System.out.print("Enter the second number:");
+            int b= input.nextInt();
+            switch (select){
+                case 1:
+                    sum(a,b);
+                    break;
+                case 2:
+                    subtraction(a,b);
+                    break;
+                case 3:
+                    multiplication(a,b);
+                    break;
+                case 4:
+                  division(a,b);
+                    break;
+                case 5:
+                    power(a,b);
+                    break;
+                case 6:
+                    System.out.println("mod operation"+mod(a,b));
+                    break;
+                case 7:
+                 calculate(a,b);
+                    break;
+                default:
+                    System.out.println("you entered a wrong operation, try again:");
+            }
+        }
+
+
+
+
     }
-    static  int fibonacci(int n){
-     if(n==1||n==2) {
-         return 1;
-     }
-     return fibonacci(n-1)+fibonacci(n-2);
 
-
+    static int sum(int a,int b){
+        int result =a+b;
+        System.out.println("addition:"+result);
+        return result;
     }
+    static int subtraction(int a,int b){
+        int result =a-b;
+        System.out.println("subtraction:"+result);
+        return result;
+    }
+    static int multiplication(int a,int b){
+        int result =a*b;
+        System.out.println("multiplication:"+result);
+        return result;
+    }
+    static int division(int a,int b){
+        if(b==0){
+            System.out.println("the second number should be greater than zero");
+            return 0;
+        }
+        int result =a/b;
+        System.out.println("division:"+result);
+        return result;
+    }
+    static int power(int a,int b){
+        int result =1;
+       for(int i=1;i<b;i++){
+           result*=a;
+       }
+        return result;
+    }
+    static int mod(int a,int b){
+
+        return a%b;
+    }
+    static void calculate(int a,int b){
+
+        System.out.println("perimeter of rectangle:"+(2*(a+b)));
+        System.out.println("Area:" +(a*b));
+    }
+
 
 
 }
