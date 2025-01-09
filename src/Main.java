@@ -1512,28 +1512,37 @@ Java döngüler ile 0'dan girilen sayıya
 
 
 
-        //pratik 42
+//
 
-        Scanner input =new Scanner(System.in);
-        System.out.println("calculate the exponential");
-        System.out.print("enter the base number:");
-        int a = input.nextInt();
-        System.out.print("enter the power number:");
-        int b= input.nextInt();
+        //pratik 43
 
-        System.out.println("result:"+exponential(a,b));
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number N: ");
+        int n = input.nextInt();
 
 
+        // Asallık kontrolü
+        if (isPrime(n)) {
+            System.out.println(n + " is a prime number.");
+        } else {
+            System.out.println(n + " is not a prime number.");
+        }
     }
 
-    static int exponential(int a, int b){
-       if(b==0){
-           return 1;
-       }
-
-        return a*exponential(a,b-1);
+    // Asal sayı kontrolü yapan metot
+    public static boolean isPrime(int n) {
+        if (n < 2) {
+            return false; // 2'den küçük sayılar asal değildir
+        }
+        for (int i = 2; i * i <= n; i++){ // Yalnızca kareköküne kadar kontrol et
+            if (n % i == 0) {
+                return false; // Bölen bulundu, asal değil
+            }
+        }
+        return true; // Bölen bulunmadı, asal
     }
 }
+
 
 
 
