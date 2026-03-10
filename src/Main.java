@@ -1,3 +1,7 @@
+import sinif.Course;
+import sinif.Student;
+import sinif.Teacher;
+
 import  java.util.Scanner;
 public class Main {
 
@@ -1514,32 +1518,49 @@ Java döngüler ile 0'dan girilen sayıya
 
 //
 
-        //pratik 43
+//        //pratik 43
+//
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Enter a number N: ");
+//        int n = input.nextInt();
+//
+//
+//        // Asallık kontrolü
+//        if (isPrime(n)) {
+//            System.out.println(n + " is a prime number.");
+//        } else {
+//            System.out.println(n + " is not a prime number.");
+//        }
+//    }
+//
+//    // Asal sayı kontrolü yapan metot
+//    public static boolean isPrime(int n) {
+//        if (n < 2) {
+//            return false; // 2'den küçük sayılar asal değildir
+//        }
+//        for (int i = 2; i * i <= n; i++){ // Yalnızca kareköküne kadar kontrol et
+//            if (n % i == 0) {
+//                return false; // Bölen bulundu, asal değil
+//            }
+//        }
+//        return true; // Bölen bulunmadı, asal
 
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number N: ");
-        int n = input.nextInt();
 
-
-        // Asallık kontrolü
-        if (isPrime(n)) {
-            System.out.println(n + " is a prime number.");
-        } else {
-            System.out.println(n + " is not a prime number.");
-        }
-    }
-
-    // Asal sayı kontrolü yapan metot
-    public static boolean isPrime(int n) {
-        if (n < 2) {
-            return false; // 2'den küçük sayılar asal değildir
-        }
-        for (int i = 2; i * i <= n; i++){ // Yalnızca kareköküne kadar kontrol et
-            if (n % i == 0) {
-                return false; // Bölen bulundu, asal değil
-            }
-        }
-        return true; // Bölen bulunmadı, asal
+        Teacher t1=new Teacher("kazim hoca","oop","555");
+        Teacher t2=new Teacher("nihat","maths" ,"554");
+        Teacher t3=new Teacher("emurullah","os","545");
+        Course java =new Course("java","101","oop",t1);
+        java.addTeacher(t1);
+        Course math=new Course("mathematics","103","maths",t2);
+        math.addTeacher(t2);
+        Course oper=new Course("operating systme","105","os",t3);
+        oper.addTeacher(t3);
+        Student s1 =new Student("ali maya kaya","2344","3",java,oper,math);
+        s1.addBulkExamNote(66,55,70);
+       s1.isPass();
+       Student s2=new Student("yakup adam","2444","3",java,math,oper);
+       s2.addBulkExamNote(60,70,10);
+       s2.isPass();
     }
 }
 
