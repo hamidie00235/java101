@@ -1,6 +1,8 @@
 import sinif.Course;
 import sinif.Student;
 import sinif.Teacher;
+import sinif.boks.Fighter;
+import sinif.boks.Match;
 
 import  java.util.Scanner;
 public class Main {
@@ -1546,21 +1548,35 @@ Java döngüler ile 0'dan girilen sayıya
 //        return true; // Bölen bulunmadı, asal
 
 
-        Teacher t1=new Teacher("kazim hoca","oop","555");
-        Teacher t2=new Teacher("nihat","maths" ,"554");
-        Teacher t3=new Teacher("emurullah","os","545");
-        Course java =new Course("java","101","oop",t1);
-        java.addTeacher(t1);
-        Course math=new Course("mathematics","103","maths",t2);
-        math.addTeacher(t2);
-        Course oper=new Course("operating systme","105","os",t3);
-        oper.addTeacher(t3);
-        Student s1 =new Student("ali maya kaya","2344","3",java,oper,math);
-        s1.addBulkExamNote(66,55,70);
-       s1.isPass();
-       Student s2=new Student("yakup adam","2444","3",java,math,oper);
-       s2.addBulkExamNote(60,70,10);
-       s2.isPass();
+//        Teacher t1=new Teacher("kazim hoca","oop","555");
+//        Teacher t2=new Teacher("nihat","maths" ,"554");
+//        Teacher t3=new Teacher("emurullah","os","545");
+//        Course java =new Course("java","101","oop",t1);
+//        java.addTeacher(t1);
+//        Course math=new Course("mathematics","103","maths",t2);
+//        math.addTeacher(t2);
+//        Course oper=new Course("operating systme","105","os",t3);
+//        oper.addTeacher(t3);
+//        Student s1 =new Student("ali maya kaya","2344","3",java,oper,math);
+//        s1.addBulkExamNote(66,55,70);
+//       s1.isPass();
+//       Student s2=new Student("yakup adam","2444","3",java,math,oper);
+//       s2.addBulkExamNote(60,70,10);
+//       s2.isPass();
+
+
+
+        /// box match
+
+        Fighter f1=new Fighter("A",10,120,100,30);
+        Fighter f2=new Fighter("B",20,85,85,40);
+
+
+        Match match=new Match(f1,f2,100,80);
+        match.run();
+
+
+
     }
 }
 
