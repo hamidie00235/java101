@@ -3,6 +3,7 @@ import sinif.Student;
 import sinif.Teacher;
 import sinif.boks.Fighter;
 import sinif.boks.Match;
+import sinif.odev.Employee;
 
 import  java.util.Scanner;
 public class Main {
@@ -1568,12 +1569,17 @@ Java döngüler ile 0'dan girilen sayıya
 
         /// box match
 
-        Fighter f1=new Fighter("A",10,120,100,30);
-        Fighter f2=new Fighter("B",20,85,85,40);
+//        Fighter f1=new Fighter("A",10,120,100,30);
+//        Fighter f2=new Fighter("B",20,85,85,40);
+//
+//
+//        Match match=new Match(f1,f2,100,80);
 
+//        match.run();
 
-        Match match=new Match(f1,f2,100,80);
-        match.run();
+        ///  odev:maş hesaplama
+        Employee em=new Employee(2021,"ahmed","hamidie",1200,45);
+        System.out.println(em);
 
 
 
