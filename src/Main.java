@@ -1577,14 +1577,30 @@ Java döngüler ile 0'dan girilen sayıya
 
 //        match.run();
 
-        ///  odev:maş hesaplama
-        Employee em=new Employee(2021,"ahmed","hamidie",1200,45);
-        System.out.println(em);
+//        ///  odev:maş hesaplama
+//        Employee em=new Employee(2021,"ahmed","hamidie",1200,45);
+//        System.out.println(em);
 
 
+        ///Çok Boyutlu Diziler
+        int[][] matris=new int[3][4];
+        int number=1;
+        for(int i=0; i< matris.length;i++){
+            for(int j=0;j< matris[i].length;j++){
+                matris[i][j]=number++;
 
-    }
-}
+
+            }
+        }
+
+        for(int i=0; i< matris.length;i++){
+            for(int j=0;j< matris[i].length;j++){
+                System.out.print(matris[i][j] + " ");
+            }
+            System.out.println();
+    }}}
+
+
 
 
 
