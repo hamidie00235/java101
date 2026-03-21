@@ -6,6 +6,7 @@ import sinif.boks.Match;
 import sinif.odev.Employee;
 
 import  java.util.Scanner;
+import java.util.Arrays;
 public class Main {
 
 
@@ -1583,22 +1584,40 @@ Java döngüler ile 0'dan girilen sayıya
 
 
         ///Çok Boyutlu Diziler
-        int[][] matris=new int[3][4];
-        int number=1;
-        for(int i=0; i< matris.length;i++){
-            for(int j=0;j< matris[i].length;j++){
-                matris[i][j]=number++;
+//        int[][] matris=new int[3][4];
+//        int number=1;
+//        for(int i=0; i< matris.length;i++){
+//            for(int j=0;j< matris[i].length;j++){
+//                matris[i][j]=number++;
+//
+//
+//            }
+//        }
+//
+//        for(int i=0; i< matris.length;i++){
+//            for(int j=0;j< matris[i].length;j++){
+//                System.out.print(matris[i][j] + " ");
+//            }
+//            System.out.println();
+//    }}
 
 
-            }
-        }
 
-        for(int i=0; i< matris.length;i++){
-            for(int j=0;j< matris[i].length;j++){
-                System.out.print(matris[i][j] + " ");
-            }
-            System.out.println();
-    }}}
+        /// Arrays Sınıfı ve Metotları
+
+
+        //arrays.toString();metodu
+
+        /// Pratik - Dizideki Elemanların Ortalamasını Bulan Program
+int [] list={2,3,4,5,6,7,8,9};
+double sum=0.0;
+for(int i=0;i<list.length;i++){
+    sum+=list[i];
+
+}
+double average =sum/ list.length;
+        System.out.println("Average:" + average);
+}};
 
 
 
