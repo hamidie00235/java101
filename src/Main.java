@@ -1609,15 +1609,33 @@ Java döngüler ile 0'dan girilen sayıya
         //arrays.toString();metodu
 
         /// Pratik - Dizideki Elemanların Ortalamasını Bulan Program
-int [] list={2,3,4,5,6,7,8,9};
-double sum=0.0;
-for(int i=0;i<list.length;i++){
-    sum+=list[i];
+//int [] list={2,3,4,5,6,7,8,9};
+//double sum=0.0;
+//for(int i=0;i<list.length;i++){
+//    sum+=list[i];
+//
+//}
+//double average =sum/ list.length;
+//        System.out.println("Average:" + average);
+//
 
+
+        // odev
+
+
+        int[] dizi = {1, 2, 3, 4, 5};
+        double toplam = 0.0;
+
+        for (int i = 0; i < dizi.length; i++) {
+            toplam += 1.0 / dizi[i];
+        }
+
+        double harmonikOrtalama = dizi.length / toplam;
+
+        System.out.println("Harmonik Ortalama: " + harmonikOrtalama);
+    }
 }
-double average =sum/ list.length;
-        System.out.println("Average:" + average);
-}};
+
 
 
 
