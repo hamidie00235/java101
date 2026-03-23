@@ -1620,19 +1620,27 @@ Java döngüler ile 0'dan girilen sayıya
 //
 
 
-        // odev
+        /// Pratik - Dizideki Maksimum ve Minimum Değerleri Bulan Program
 
 
-        int[] dizi = {1, 2, 3, 4, 5};
-        double toplam = 0.0;
+        int [] list={123,134,4,5,66,335,55};
 
-        for (int i = 0; i < dizi.length; i++) {
-            toplam += 1.0 / dizi[i];
+        // min=list[0],min<list[i] ? min=list[i]
+        // max=list[0],max>list[i] ? max=list[i]
+
+        int min =list[0];
+        int max =list[0];
+        for(int i:list){
+            if (i<min) {
+                min=i;
+
+            }
+            if(i>max){
+                max=i;
+            }
         }
-
-        double harmonikOrtalama = dizi.length / toplam;
-
-        System.out.println("Harmonik Ortalama: " + harmonikOrtalama);
+        System.out.println("minimum value :" + min);
+        System.out.println("maximum value :" + max);
     }
 }
 
