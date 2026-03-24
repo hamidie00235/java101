@@ -1623,25 +1623,50 @@ Java döngüler ile 0'dan girilen sayıya
         /// Pratik - Dizideki Maksimum ve Minimum Değerleri Bulan Program
 
 
-        int [] list={123,134,4,5,66,335,55};
+//        int [] list={123,134,4,5,66,335,55};
+//
+//        // min=list[0],min<list[i] ? min=list[i]
+//        // max=list[0],max>list[i] ? max=list[i]
+//
+//        int min =list[0];
+//        int max =list[0];
+//        for(int i:list){
+//            if (i<min) {
+//                min=i;
+//
+//            }
+//            if(i>max){
+//                max=i;
+//            }
+//        }
+//        System.out.println("minimum value :" + min);
+//        System.out.println("maximum value :" + max);
 
-        // min=list[0],min<list[i] ? min=list[i]
-        // max=list[0],max>list[i] ? max=list[i]
+        int[] Dizi = {15,12,788,1,-1,-778,2,0};
+        Scanner input = new Scanner(System.in);
 
-        int min =list[0];
-        int max =list[0];
-        for(int i:list){
-            if (i<min) {
-                min=i;
+        System.out.println("Enter a number:");
+        int a = input.nextInt();
 
+        int kucukYakin = Integer.MIN_VALUE;
+        int buyukYakin = Integer.MAX_VALUE;
+
+        for (int i : Dizi) {
+
+            if (i < a && i > kucukYakin) {
+                kucukYakin = i;
             }
-            if(i>max){
-                max=i;
+
+            if (i > a && i < buyukYakin) {
+                buyukYakin = i;
             }
         }
-        System.out.println("minimum value :" + min);
-        System.out.println("maximum value :" + max);
+
+        System.out.println("Girilen sayı: " + a);
+        System.out.println("Sayıdan küçük en yakın: " + kucukYakin);
+        System.out.println("Sayıdan büyük en yakın: " + buyukYakin);
     }
+
 }
 
 
