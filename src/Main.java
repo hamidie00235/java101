@@ -1642,29 +1642,55 @@ Java döngüler ile 0'dan girilen sayıya
 //        System.out.println("minimum value :" + min);
 //        System.out.println("maximum value :" + max);
 
-        int[] Dizi = {15,12,788,1,-1,-778,2,0};
-        Scanner input = new Scanner(System.in);
+//        int[] Dizi = {15,12,788,1,-1,-778,2,0};
+//      0  Scanner input = new Scanner(System.in);
+//
+//        System.out.println("Enter a number:");
+//        int a = input.nextInt();
+//
+//        int kucukYakin = Integer.MIN_VALUE;
+//        int buyukYakin = Integer.MAX_VALUE;
+//
+//        for (int i : Dizi) {
+//
+//            if (i < a && i > kucukYakin) {
+//                kucukYakin = i;
+//            }
+//
+//            if (i > a && i < buyukYakin) {
+//                buyukYakin = i;
+//            }
+//        }
+//
+//        System.out.println("Girilen sayı: " + a);
+//        System.out.println("Sayıdan küçük en yakın: " + kucukYakin);
+//        System.out.println("Sayıdan büyük en yakın: " + buyukYakin);
 
-        System.out.println("Enter a number:");
-        int a = input.nextInt();
+        ///Pratik - Çok Boyutlu Diziler ile A Harfi Yazdıran Program
 
-        int kucukYakin = Integer.MIN_VALUE;
-        int buyukYakin = Integer.MAX_VALUE;
+        String [][] letter =new String[6][4];
 
-        for (int i : Dizi) {
+        for(int i =0;i< letter.length;i++){
+            for(int j=0;j< letter[i].length;j++){
+                if(i==0 || i==2){
+                    letter[i][j]="*";
+                } else if (j==0 || j==3) {
+                    letter[i][j]="*";
+                    
+                }
+                else{
+                    letter[i][j]=" ";
+                }
 
-            if (i < a && i > kucukYakin) {
-                kucukYakin = i;
-            }
-
-            if (i > a && i < buyukYakin) {
-                buyukYakin = i;
             }
         }
+        for(String[] row :letter){
+            for(String col :row){
+                System.out.print(col);
 
-        System.out.println("Girilen sayı: " + a);
-        System.out.println("Sayıdan küçük en yakın: " + kucukYakin);
-        System.out.println("Sayıdan büyük en yakın: " + buyukYakin);
+            }
+            System.out.println();
+        }
     }
 
 }
