@@ -10,7 +10,14 @@ import java.util.Arrays;
 public class Main {
 
 
-
+static  boolean isFind(int[] arr ,int value){
+    for(int i :arr){
+        if(i==value){
+            return  true;
+        }
+    }
+return  false;
+}
 
     public static void main(String[] args) {
 
@@ -1667,30 +1674,62 @@ Java döngüler ile 0'dan girilen sayıya
 //        System.out.println("Sayıdan büyük en yakın: " + buyukYakin);
 
         ///Pratik - Çok Boyutlu Diziler ile A Harfi Yazdıran Program
+//
+//        String [][] letter =new String[6][4];
+//
+//        for(int i =0;i< letter.length;i++){
+//            for(int j=0;j< letter[i].length;j++){
+//                if(i==0 || i==2 || i==5){
+//                    letter[i][j]="*";
+//                } else if (j==0 || j==3) {
+//                    letter[i][j]="*";
+//
+//                }
+//                else{
+//                    letter[i][j]=" ";
+//                }
+//
+//            }
+//        }
+//        for(String[] row :letter){
+//            for(String col :row){
+//                System.out.print(col);
+//
+//            }
+//            System.out.println();
+//        }
 
-        String [][] letter =new String[6][4];
 
-        for(int i =0;i< letter.length;i++){
-            for(int j=0;j< letter[i].length;j++){
-                if(i==0 || i==2 || i==5){
-                    letter[i][j]="*";
-                } else if (j==0 || j==3) {
-                    letter[i][j]="*";
-                    
+
+
+
+
+
+        /// Pratik - Dizideki Tekrar Eden Sayıları Bulan Program
+        int [] list={2,3,6,7,7,19,3,0,4,5,5,5,6};
+
+        int [] duplicate=new int[list.length];
+        int startIndex=0;
+        for(int i=0;i< list.length;i++){
+            for(int j=0;j< list.length;j++){
+                if((i!=j) && (list[i]==list[j])){
+                    if(!isFind(duplicate,list[i])){
+                        duplicate[startIndex++]=list[i];
+
+                    }
+                    break;
+
                 }
-                else{
-                    letter[i][j]=" ";
-                }
-
             }
-        }
-        for(String[] row :letter){
-            for(String col :row){
-                System.out.print(col);
 
-            }
-            System.out.println();
         }
+
+     for(int value:duplicate){
+         if(value!=0){
+             System.out.println(value);
+         }
+     }
+
     }
 
 }
