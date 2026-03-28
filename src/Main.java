@@ -9,15 +9,15 @@ import  java.util.Scanner;
 import java.util.Arrays;
 public class Main {
 
-
-static  boolean isFind(int[] arr ,int value){
-    for(int i :arr){
-        if(i==value){
-            return  true;
-        }
-    }
-return  false;
-}
+//
+//static  boolean isFind(int[] arr ,int value){
+//    for(int i :arr){
+//        if(i==value){
+//            return  true;
+//        }
+//    }
+//return  false;
+//}
 
     public static void main(String[] args) {
 
@@ -1705,34 +1705,53 @@ Java döngüler ile 0'dan girilen sayıya
 
 
 
-        /// Pratik - Dizideki Tekrar Eden Sayıları Bulan Program
-        int [] list={2,3,6,7,7,19,3,0,4,5,5,5,6};
+//        /// Pratik - Dizideki Tekrar Eden Sayıları Bulan Program
+//        int [] list={2,3,6,7,7,19,3,0,4,5,5,5,6};
+//
+//        int [] duplicate=new int[list.length];
+//        int startIndex=0;
+//        for(int i=0;i< list.length;i++){
+//            for(int j=0;j< list.length;j++){
+//                if((i!=j) && (list[i]==list[j])){
+//                    if(!isFind(duplicate,list[i])){
+//                        duplicate[startIndex++]=list[i];
+//
+//                    }
+//                    break;
+//
+//                }
+//            }
+//
+//        }
+//
+//     for(int value:duplicate){
+//         if(value!=0){
+//             System.out.println(value);
+//         }
+//     }
 
-        int [] duplicate=new int[list.length];
-        int startIndex=0;
-        for(int i=0;i< list.length;i++){
-            for(int j=0;j< list.length;j++){
-                if((i!=j) && (list[i]==list[j])){
-                    if(!isFind(duplicate,list[i])){
-                        duplicate[startIndex++]=list[i];
 
+
+        /// odev
+
+
+            int[] dizi = {2, 4, 6, 8, 2, 4, 10, 6,5,79};
+
+            for (int i = 0; i < dizi.length; i++) {
+
+                if (dizi[i] % 2 == 0) {
+
+                    for (int j = i + 1; j < dizi.length; j++) {
+
+                        if (dizi[i] == dizi[j]) {
+                            System.out.println(dizi[i]);
+                            break;
+                        }
                     }
-                    break;
 
-                }
-            }
+                }}}}
 
-        }
 
-     for(int value:duplicate){
-         if(value!=0){
-             System.out.println(value);
-         }
-     }
-
-    }
-
-}
 
 
 
