@@ -1732,24 +1732,52 @@ Java döngüler ile 0'dan girilen sayıya
 
 
 
-        /// odev
+//        /// odev
+//
+//
+//            int[] dizi = {2, 4, 6, 8, 2, 4, 10, 6,5,79};
+//
+//            for (int i = 0; i < dizi.length; i++) {
+//
+//                if (dizi[i] % 2 == 0) {
+//
+//                    for (int j = i + 1; j < dizi.length; j++) {
+//
+//                        if (dizi[i] == dizi[j]) {
+//                            System.out.println(dizi[i]);
+//                            break;
+//                        }
+//                    }
+//
+//                }}
+//
+//
 
 
-            int[] dizi = {2, 4, 6, 8, 2, 4, 10, 6,5,79};
 
-            for (int i = 0; i < dizi.length; i++) {
+        //Java dilinde, dizideki elemanları küçükten büyüğe sıralayan programı yazınız.
+        // Dizinin boyutunu ve dizinin elemanlarını kullanıcıdan alınız.
 
-                if (dizi[i] % 2 == 0) {
+      int[] dizi ={10, 20, 20, 10, 10, 20, 5, 20};
 
-                    for (int j = i + 1; j < dizi.length; j++) {
+      boolean[] checked=new boolean[dizi.length];
+       for(int i=0;i<dizi.length ;i++) {
+           int count = 1;
+           if (!checked[i]) {
+               for (int j = i + 1; j < dizi.length; j++) {
+                   if (dizi[i]==dizi[j]) {
+                       count++;
+                    checked[j]=true;
+                   }
 
-                        if (dizi[i] == dizi[j]) {
-                            System.out.println(dizi[i]);
-                            break;
-                        }
-                    }
 
-                }}}}
+               }
+               if(count>1){
+                   System.out.println(dizi[i] + "(" + count + ") kez");
+               }
+           }
+
+       }}}
 
 
 
