@@ -1755,29 +1755,65 @@ Java döngüler ile 0'dan girilen sayıya
 
 
 
-        //Java dilinde, dizideki elemanları küçükten büyüğe sıralayan programı yazınız.
-        // Dizinin boyutunu ve dizinin elemanlarını kullanıcıdan alınız.
+//        //Java dilinde, dizideki elemanları küçükten büyüğe sıralayan programı yazınız.
+//        // Dizinin boyutunu ve dizinin elemanlarını kullanıcıdan alınız.
+//
+//      int[] dizi ={10, 20, 20, 10, 10, 20, 5, 20};
+//
+//      boolean[] checked=new boolean[dizi.length];
+//       for(int i=0;i<dizi.length ;i++) {
+//           int count = 1;
+//           if (!checked[i]) {
+//               for (int j = i + 1; j < dizi.length; j++) {
+//                   if (dizi[i]==dizi[j]) {
+//                       count++;
+//                    checked[j]=true;
+//                   }
+//
+//
+//               }
+//               if(count>1){
+//                   System.out.println(dizi[i] + "(" + count + ") kez");
+//               }
+//           }
+//
+//       }
 
-      int[] dizi ={10, 20, 20, 10, 10, 20, 5, 20};
-
-      boolean[] checked=new boolean[dizi.length];
-       for(int i=0;i<dizi.length ;i++) {
-           int count = 1;
-           if (!checked[i]) {
-               for (int j = i + 1; j < dizi.length; j++) {
-                   if (dizi[i]==dizi[j]) {
-                       count++;
-                    checked[j]=true;
-                   }
 
 
-               }
-               if(count>1){
-                   System.out.println(dizi[i] + "(" + count + ") kez");
-               }
-           }
+        //Java dilinde, dizideki elemanları küçükten büyüğe sıralayan programı yazınız. Dizinin boyutunu ve dizinin elemanlarını kullanıcıdan alınız.
 
-       }}}
+        Scanner input =new Scanner(System.in);
+        System.out.println("dizi boyutu ve elemalarini giriniz :");
+        int size= input.nextInt();
+        int[] dizi =new int[size];
+        System.out.println("Elemanları giriniz:");
+        for(int i=0;i<size;i++){
+            dizi[i]= input.nextInt();
+        }
+
+        //-1 0 22 254 999 1000221
+        for(int i=0;i< dizi.length-1;i++){
+            int minIndex=i;
+            for(int j=i+1;j< dizi.length;j++){
+                if(dizi[j]<dizi[minIndex]){
+                    minIndex=j;
+
+                }
+            }
+
+            //swap
+
+            int temp=dizi[minIndex];
+            dizi[minIndex]=dizi[i];
+            dizi[i]=temp;
+        }
+
+        for(int k=0;k< dizi.length;k++){
+            System.out.print(dizi[k] + " ");
+        }
+    }}
+
 
 
 
