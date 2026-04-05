@@ -22,7 +22,6 @@ public class Main {
     public static void main(String[] args) {
 
 
-
 //        int width=10;
 //        int length =13;
 //        int areas=length*width;
@@ -1302,7 +1301,6 @@ Java döngüler ile 0'dan girilen sayıya
 //        }
 
 
-
 //        //pratik 34
 //
 //        Scanner input =new Scanner(System.in);
@@ -1327,10 +1325,10 @@ Java döngüler ile 0'dan girilen sayıya
 //        }
 
 
-       /*pratik 35
-       * Java ile basamak sayısının kullanıcıdan alınan ve döngüler kullanılarak,
-       *  yıldızlar(*) ile ekrana ters üçgen çizen programı yazın
-       * */
+        /*pratik 35
+         * Java ile basamak sayısının kullanıcıdan alınan ve döngüler kullanılarak,
+         *  yıldızlar(*) ile ekrana ters üçgen çizen programı yazın
+         * */
 
 //        Scanner scanner =new Scanner(System.in);
 //
@@ -1367,7 +1365,6 @@ Java döngüler ile 0'dan girilen sayıya
 //        }
 
 
-
         //pratik 38
 
 //        Scanner scanner = new Scanner(System.in);
@@ -1385,7 +1382,6 @@ Java döngüler ile 0'dan girilen sayıya
 //            first = second;
 //            second = next;
 //        }
-
 
 
         // pratik 39
@@ -1422,13 +1418,7 @@ Java döngüler ile 0'dan girilen sayıya
 //     return fibonacci(n-1)+fibonacci(n-2);
 
 
-
-
         //pratik 41
-
-
-
-
 
 
 //        Scanner input =new Scanner(System.in);
@@ -1526,7 +1516,6 @@ Java döngüler ile 0'dan girilen sayıya
 //        System.out.println("Area:" +(a*b));
 
 
-
 //
 
 //        //pratik 43
@@ -1574,7 +1563,6 @@ Java döngüler ile 0'dan girilen sayıya
 //       s2.isPass();
 
 
-
         /// box match
 
 //        Fighter f1=new Fighter("A",10,120,100,30);
@@ -1607,7 +1595,6 @@ Java döngüler ile 0'dan girilen sayıya
 //            }
 //            System.out.println();
 //    }}
-
 
 
         /// Arrays Sınıfı ve Metotları
@@ -1700,11 +1687,6 @@ Java döngüler ile 0'dan girilen sayıya
 //        }
 
 
-
-
-
-
-
 //        /// Pratik - Dizideki Tekrar Eden Sayıları Bulan Program
 //        int [] list={2,3,6,7,7,19,3,0,4,5,5,5,6};
 //
@@ -1731,7 +1713,6 @@ Java döngüler ile 0'dan girilen sayıya
 //     }
 
 
-
 //        /// odev
 //
 //
@@ -1752,7 +1733,6 @@ Java döngüler ile 0'dan girilen sayıya
 //                }}
 //
 //
-
 
 
 //        //Java dilinde, dizideki elemanları küçükten büyüğe sıralayan programı yazınız.
@@ -1780,39 +1760,85 @@ Java döngüler ile 0'dan girilen sayıya
 //       }
 
 
+//        //Java dilinde, dizideki elemanları küçükten büyüğe sıralayan programı yazınız. Dizinin boyutunu ve dizinin elemanlarını kullanıcıdan alınız.
+//
+//        Scanner input =new Scanner(System.in);
+//        System.out.println("dizi boyutu ve elemalarini giriniz :");
+//        int size= input.nextInt();
+//        int[] dizi =new int[size];
+//        System.out.println("Elemanları giriniz:");
+//        for(int i=0;i<size;i++){
+//            dizi[i]= input.nextInt();
+//        }
+//
+//        //-1 0 22 254 999 1000221
+//        for(int i=0;i< dizi.length-1;i++){
+//            int minIndex=i;
+//            for(int j=i+1;j< dizi.length;j++){
+//                if(dizi[j]<dizi[minIndex]){
+//                    minIndex=j;
+//
+//                }
+//            }
+//
+//            //swap
+//
+//            int temp=dizi[minIndex];
+//            dizi[minIndex]=dizi[i];
+//            dizi[i]=temp;
+//        }
+//
+//        for(int k=0;k< dizi.length;k++){
+//            System.out.print(dizi[k] + " ");
+//        }
 
-        //Java dilinde, dizideki elemanları küçükten büyüğe sıralayan programı yazınız. Dizinin boyutunu ve dizinin elemanlarını kullanıcıdan alınız.
 
-        Scanner input =new Scanner(System.in);
-        System.out.println("dizi boyutu ve elemalarini giriniz :");
-        int size= input.nextInt();
-        int[] dizi =new int[size];
-        System.out.println("Elemanları giriniz:");
-        for(int i=0;i<size;i++){
-            dizi[i]= input.nextInt();
+        //Ödev - Matris Transpozunu Bulma
+        //Java dilinde, çok boyutlu diziler ile oluşturulmuş matrisin transpozunu bulan programı yazınız.
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the row:");
+        int rows = sc.nextInt();
+        System.out.print("Enter the columns:");
+        int columns = sc.nextInt();
+        int[][] matrix = new int[rows][columns];
+        System.out.println("Enter matrix'size");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                matrix[i][j] = sc.nextInt();
+
+            }
         }
+        // transpose matrix
 
-        //-1 0 22 254 999 1000221
-        for(int i=0;i< dizi.length-1;i++){
-            int minIndex=i;
-            for(int j=i+1;j< dizi.length;j++){
-                if(dizi[j]<dizi[minIndex]){
-                    minIndex=j;
+        System.out.println("orijinal matrix");
+printMatrix(matrix);
+
+// satir :2 ,sutur:3
+        //yeni satir :3,yeni sutur :2
+
+        int newRows =columns;
+        int newColumns=rows;
+        int[][] transpose =new int[newRows][newColumns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+              transpose[j][i] =matrix[i][j];
+    }}
+
+        System.out.println("Transpose matrix: ");
+   printMatrix(transpose);
+    }
+        public static void printMatrix(int[][] matrix){
+            for(int i=0;i< matrix.length;i++){
+                for(int j=0;j< matrix[0].length;j++){
+                    System.out.print(matrix[i][j] + " ");
 
                 }
+                System.out.println();
             }
-
-            //swap
-
-            int temp=dizi[minIndex];
-            dizi[minIndex]=dizi[i];
-            dizi[i]=temp;
         }
 
-        for(int k=0;k< dizi.length;k++){
-            System.out.print(dizi[k] + " ");
-        }
-    }}
+    }
 
 
 
