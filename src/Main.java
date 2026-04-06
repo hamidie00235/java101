@@ -1793,52 +1793,84 @@ Java döngüler ile 0'dan girilen sayıya
 //        }
 
 
-        //Ödev - Matris Transpozunu Bulma
-        //Java dilinde, çok boyutlu diziler ile oluşturulmuş matrisin transpozunu bulan programı yazınız.
+//        //Ödev - Matris Transpozunu Bulma
+//        //Java dilinde, çok boyutlu diziler ile oluşturulmuş matrisin transpozunu bulan programı yazınız.
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter the row:");
+//        int rows = sc.nextInt();
+//        System.out.print("Enter the columns:");
+//        int columns = sc.nextInt();
+//        int[][] matrix = new int[rows][columns];
+//        System.out.println("Enter matrix'size");
+//        for (int i = 0; i < rows; i++) {
+//            for (int j = 0; j < columns; j++) {
+//                matrix[i][j] = sc.nextInt();
+//
+//            }
+//        }
+//        // transpose matrix
+//
+//        System.out.println("orijinal matrix");
+//printMatrix(matrix);
+//
+//// satir :2 ,sutur:3
+//        //yeni satir :3,yeni sutur :2
+//
+//        int newRows =columns;
+//        int newColumns=rows;
+//        int[][] transpose =new int[newRows][newColumns];
+//        for (int i = 0; i < rows; i++) {
+//            for (int j = 0; j < columns; j++) {
+//              transpose[j][i] =matrix[i][j];
+//    }}
+//
+//        System.out.println("Transpose matrix: ");
+//   printMatrix(transpose);
+//    }
+//        public static void printMatrix(int[][] matrix){
+//            for(int i=0;i< matrix.length;i++){
+//                for(int j=0;j< matrix[0].length;j++){
+//                    System.out.print(matrix[i][j] + " ");
+//
+//                }
+//                System.out.println();
+//            }
+
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the row:");
-        int rows = sc.nextInt();
-        System.out.print("Enter the columns:");
-        int columns = sc.nextInt();
-        int[][] matrix = new int[rows][columns];
-        System.out.println("Enter matrix'size");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-                matrix[i][j] = sc.nextInt();
 
-            }
+        int size = sc.nextInt();
+        int[] A = new int[size];
+
+        // Fill array
+        for (int i = 0; i < size; i++) {
+            A[i] = sc.nextInt();
         }
-        // transpose matrix
 
-        System.out.println("orijinal matrix");
-printMatrix(matrix);
+        int negCount = 0;
 
-// satir :2 ,sutur:3
-        //yeni satir :3,yeni sutur :2
+        // Check all subarrays
+        for (int i = 0; i < A.length; i++) {
+            int sum = 0;
 
-        int newRows =columns;
-        int newColumns=rows;
-        int[][] transpose =new int[newRows][newColumns];
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < columns; j++) {
-              transpose[j][i] =matrix[i][j];
-    }}
+            for (int j = i; j < A.length; j++) {
+                sum += A[j];
 
-        System.out.println("Transpose matrix: ");
-   printMatrix(transpose);
-    }
-        public static void printMatrix(int[][] matrix){
-            for(int i=0;i< matrix.length;i++){
-                for(int j=0;j< matrix[0].length;j++){
-                    System.out.print(matrix[i][j] + " ");
-
+                if (sum < 0) {
+                    negCount++;
                 }
-                System.out.println();
             }
         }
 
+        System.out.print(negCount);
+
+        sc.close();
     }
+}
+
+
+
 
 
 
